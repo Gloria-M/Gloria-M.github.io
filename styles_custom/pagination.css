@@ -1,0 +1,38 @@
+.main-container{
+  padding-top: 90px;
+  width: 70%
+}
+
+.cards-container{
+  width: 100%;
+  /* position: relative; */
+}
+
+.brand-container{
+  width: 15% !important;
+  text-align: right !important;
+  background-color: transparent;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  font-size: 1.25rem;
+}
+
+/* .menu-container{
+  width: 70% !important;
+  text-align: right !important;
+  background-color: transparent;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  font-size: 1.25rem;
+} */
+
+.menu-container{
+  width: 40% !important;
+  float: right;
+  margin-right: 18% !important;
+  text-align: right !important;
+  background-color: transparent;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  font-size: 1.25rem;
+}

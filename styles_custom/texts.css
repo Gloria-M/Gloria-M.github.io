@@ -1,0 +1,40 @@
+.text-r{
+  text-align: right !important;
+}
+
+.text-read-more{
+  font-weight: 500;
+}
+
+.text-to-code{
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.text-brand{
+  font-weight: 500;
+  text-decoration: none !important;
+  font-size: 1.40rem !important;
+}
+
+.text-l{
+  font-size: 1.175rem !important;
+}
+
+.text-m{
+  font-size: .875rem !important;
+}
+
+.text-s{
+  font-size: .75rem !important;
+}
+
+.link-text{
+  color: #585856 !important;
+  text-decoration: none !important;
+}
+
+.item-text{
+  font-size: 1.20rem !important;
+  font-weight: 400;
+}

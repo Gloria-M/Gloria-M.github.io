@@ -1,0 +1,86 @@
+.bg-transparent{
+  background-color: transparent !important;
+}
+
+.bg-white-o{
+  background-color: #fffdfd !important;
+}
+
+.bg-white{
+  background-color: #fffdfd80 !important;
+}
+
+.bg-navbar{
+  background-color: #a1a0a0 !important;
+}
+
+.bg-gray-light{
+  background-color: #a1a0a0 !important;
+}
+
+.bg-gray-dark{
+  background-color: #4f4f4f !important;
+}
+.bg-gray-dark-t50{
+  background-color: #4f4f4f80 !important;
+}
+
+.bg-nav-dark{
+  background-color: #585856;
+}
+
+.text-dark{
+  color: #585856 !important;
+}
+
+.text-peach{
+  color: #d7c6be !important;
+}
+
+.dataset-bg{
+  background-color: #cf3327;
+}
+
+.dataset-btn{
+  border-color: #cf3327 !important;
+}
+
+.dataset-btn:focus {
+  background-color: #cf332799 !important;
+  border-color: #4f4f4f66 !important;
+  font-weight: 500
+}
+
+.dataset-btn:hover {
+  background-color: #cf332726 !important;
+  border-color: #4f4f4f66 !important;
+  font-weight: 500
+}
+
+.dataset-text{
+  color: #cf3327 !important;
+}
+
+.multi-modal-bg{
+  background-color: #48a090;
+}
+
+.multi-modal-btn{
+  border-color: #48a090 !important;
+}
+
+.multi-modal-btn:focus{
+  background-color: #48a09099 !important;
+  border-color: #4f4f4f66 !important;
+  font-weight: 500
+}
+
+.multi-modal-btn:hover {
+  background-color: #48a09026 !important;
+  border-color: #4f4f4f66 !important;
+  font-weight: 500
+}
+
+.multi-modal-text{
+  color: #48a090 !important;
+}

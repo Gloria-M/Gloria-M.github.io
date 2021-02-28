@@ -17,12 +17,20 @@
   font-size: 1.40rem !important;
 }
 
+.text-xl{
+  font-size: 1.2rem !important;
+}
+
 .text-l{
   font-size: 1.175rem !important;
 }
 
 .text-m{
   font-size: .875rem !important;
+}
+
+.text-section{
+  font-size: 1rem !important;
 }
 
 .text-s{
@@ -37,4 +45,23 @@
 .item-text{
   font-size: 1.20rem !important;
   font-weight: 400;
+}
+
+.text-proj-code{
+  margin-left: -70%;
+  font-size: .75rem !important;
+  font-weight: 400;
+  /* text-decoration: none !important; */
+}
+
+.text-proj-data{
+  margin-left: -90%;
+  font-size: .75rem !important;
+  font-weight: 400;
+  /* text-decoration: none !important; */
+}
+
+.dataset-link{
+  text-decoration: none !important;
+  color: #cf3327 !important;
 }

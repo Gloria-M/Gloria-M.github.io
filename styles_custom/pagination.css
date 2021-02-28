@@ -17,15 +17,6 @@
   font-size: 1.25rem;
 }
 
-/* .menu-container{
-  width: 70% !important;
-  text-align: right !important;
-  background-color: transparent;
-  padding-top: 0.3125rem;
-  padding-bottom: 0.3125rem;
-  font-size: 1.25rem;
-} */
-
 .menu-container{
   width: 40% !important;
   float: right;
@@ -35,4 +26,30 @@
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
   font-size: 1.25rem;
+}
+
+.col-side{
+  flex: 0 0 auto;
+  width: 15%;
+}
+
+.col-middle{
+  flex: 0 0 auto;
+  width: 70%;
+}
+
+.read-container{
+  padding-top: 90px;
+  width: 100%;
+  /* position: relative; */
+}
+
+.col-proj-main{
+  flex: 0 0 auto;
+  width: 80%;
+}
+
+.col-empty{
+  flex: 0 0 auto;
+  width: 10%;
 }

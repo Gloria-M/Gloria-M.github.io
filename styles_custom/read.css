@@ -2,18 +2,21 @@
   height: 2px;
   background-color: #cf3327 !important;
   color: #cf3327 !important;
-  margin: 15px 0px 50px 0px;
+  margin: -5px 0px 25px 0px;
 }
+
+
 
 .proj-code-space{
   padding-top: 10px;
 }
 
-.sect-title-space{
+.toc-title-space{
   padding-top: 25px;
+  scroll-margin-top: 65px;
 }
 
-.sect-title-sep{
+.toc-title-sep{
   width: 50%;
   height: 1px;
   background-color: #cf3327 !important;
@@ -35,4 +38,16 @@ code {
   border-radius: 3px;
   font-family: courier, monospace;
   padding: 0 3px;
+}
+
+.proj-structure{
+  text-align: right !important;
+  height: auto;
+  position: fixed;
+  bottom: 10%;
+  right: 80%;
+}
+
+.proj-code{
+  text-align: right !important;
 }

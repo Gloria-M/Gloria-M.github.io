@@ -29,13 +29,14 @@
 }
 
 .col-side{
+  /*padding-top: 90px;*/
   flex: 0 0 auto;
-  width: 15%;
+  width: 25%;
 }
 
 .col-middle{
   flex: 0 0 auto;
-  width: 70%;
+  width: 50%;
 }
 
 .read-container{
@@ -46,10 +47,18 @@
 
 .col-proj-main{
   flex: 0 0 auto;
-  width: 80%;
+  width: 100%;
 }
 
 .col-empty{
   flex: 0 0 auto;
-  width: 10%;
+  width: 0%;
+}
+
+.struct-col{
+  padding-right: 3%;
+}
+
+.title-space{
+  padding-bottom: 0px;
 }

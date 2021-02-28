@@ -1,9 +1,10 @@
 .navbar-custom{
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
   top: 0;
   z-index: 7000;
   width: 100%;
-  height: 80px;
+  height: 70px;
   /* border: .075rem solid #4f4f4f80;
   background-color: #4f4f4f80; */
 }

@@ -37,6 +37,10 @@
   font-size: .75rem !important;
 }
 
+.text-sm{
+  font-size: .80rem !important;
+}
+
 .link-text{
   color: #585856 !important;
   text-decoration: none !important;
@@ -55,7 +59,7 @@
 }
 
 .text-proj-data{
-  margin-left: -90%;
+  /*margin-left: -90%;*/
   font-size: .75rem !important;
   font-weight: 400;
   /* text-decoration: none !important; */
@@ -64,4 +68,9 @@
 .dataset-link{
   text-decoration: none !important;
   color: #cf3327 !important;
+}
+
+.struct-link{
+  text-decoration: none !important;
+  color: #585856 !important;
 }

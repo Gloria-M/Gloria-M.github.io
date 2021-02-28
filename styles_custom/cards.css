@@ -1,0 +1,71 @@
+.card-custom{
+    border-color:transparent !important;
+    margin-top: 50px;
+    margin-bottom: 150px;
+}
+
+.card-sep{
+  z-index: 2000;
+  position: relative;
+  width: 130%;
+  height: 2px;
+  margin: 20px 0% 5px -30%;
+  border-radius: 2px;
+}
+
+.card-img-holder{
+  padding: 15px 15px 15px 15px;
+  border-width: .125rem .125rem .125rem .125rem;
+  border-style:  solid !important;
+  border-color: #4f4f4f80 !important;
+}
+
+.img-pos{
+  position: relative;
+  margin: 10px 10px 10px 10px;
+}
+
+.card-text-container{
+  height: 90%;
+}
+
+.card-btns-container{
+  height: 10%;
+}
+
+.card-name-holder{
+  padding-top: 5px;
+}
+
+.card-desc-holder{
+  padding-top: 25px;
+  padding-left: 25px;
+}
+
+.card-btns-holder{
+  margin-top: -60px;
+  text-align: right !important;
+  padding-top: 0rem !important;
+  padding-bottom:0rem !important;
+  background: transparent;
+  border-top: 0px;
+}
+
+.card-btn{
+  background-color: transparent;
+  border: .125rem solid !important;
+  margin-bottom: 0px;
+  float: right;
+  width: 125px;
+  font-size: .85rem;
+  line-height: 1.25;
+  height: 30px !important;
+  padding-top: 0rem !important;
+  padding-bottom:0rem !important;
+}
+
+.card-btn:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0;
+  border: .15rem solid !important;
+}

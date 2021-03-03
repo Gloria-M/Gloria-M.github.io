@@ -43,6 +43,7 @@
 html {
   font-size: 100%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *, *::before, *::after {
@@ -72,7 +73,7 @@ body.no-scroll {
 h1, h2, h3 {
   font-weight: 300;
   line-height: 1.15;
-  color: #5d65a2;
+  color: #585856;
   margin-top: 0;
 }
 
@@ -213,20 +214,12 @@ button, .button {
   color: #cf3327;
 }
 
-.dataset-cite {
-  text-decoration: None;
-}
-
 .multimodal-bg {
   background-color: #48a090;
 }
 
 .multimodal-text {
   color: #48a090;
-}
-
-.multimodal-cite {
-  text-decoration: None;
 }
 
 .header.open .header__toggle > span:first-child {
@@ -445,16 +438,16 @@ button, .button {
 
 .project__description {
   text-align: left;
-  font-size: .8125rem;
+  font-size: .875rem;
   line-height: 1.5;
   overflow: hidden;
-  max-height: 3.5rem;
+  max-height: 3.75rem;
 }
 
 @media (min-width: 48em) {
   .project__description {
-    font-size: .875rem;
-    max-height: 2.65rem;
+    font-size: 1rem;
+    max-height: 2.85rem;
   }
 }
 
@@ -520,5 +513,195 @@ button, .button {
 
 .project__go-to__btn__multimodal:hover {
   background-color: #48a09066;
+}
+
+.read {
+  background-color: #fafafa;
+}
+
+.read__grid {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+@media (min-width: 48em) {
+  .read__grid {
+    display: flex;
+  }
+}
+
+.read .toc-item {
+  width: 100%;
+  text-align: left;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+@media (min-width: 48em) {
+  .read .toc-item {
+    flex: 1;
+    flex-basis: 30%;
+    text-align: right;
+    padding-top: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+.read .content-item {
+  width: 100%;
+  max-width: 42rem;
+  padding-top: 3rem;
+}
+
+@media (min-width: 48em) {
+  .read .content-item {
+    flex: 1;
+    flex-basis: 70%;
+    max-width: 100%;
+  }
+}
+
+.read__intro {
+  width: 100%;
+}
+
+@media (min-width: 48em) {
+  .read__intro .intro-item {
+    display: flex;
+    align-items: flex-end;
+  }
+}
+
+.read__intro .intro-item__title {
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-align: left;
+  color: #585856;
+}
+
+@media (min-width: 48em) {
+  .read__intro .intro-item__title {
+    flex-basis: 80%;
+    font-size: 1.375rem;
+  }
+}
+
+.read__intro .intro-item__to-code {
+  font-size: .8125rem;
+  text-align: right;
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 48em) {
+  .read__intro .intro-item__to-code {
+    flex-basis: 20%;
+    font-size: .875rem;
+    padding-bottom: 0;
+  }
+}
+
+.read__sep-holder {
+  padding: .15rem 0 .15rem 0;
+}
+
+@media (min-width: 48em) {
+  .read__sep-holder {
+    padding: .25rem 0 1rem 0;
+  }
+}
+
+.read__separator {
+  width: 100%;
+  height: 1px;
+}
+
+.read__content {
+  text-align: left;
+}
+
+.read__content .section__holder {
+  padding: .25rem 0 .15rem 0;
+}
+
+@media (min-width: 48em) {
+  .read__content .section__holder {
+    padding: .25rem 0 .5rem 0;
+  }
+}
+
+.read__content .section__title {
+  width: 75%;
+  font-size: .975rem;
+  font-weight: 400;
+  color: #585856;
+}
+
+@media (min-width: 48em) {
+  .read__content .section__title {
+    font-size: 1.125rem;
+  }
+}
+
+.read__content .section__separator {
+  width: 75%;
+  height: 1px;
+  text-align: left;
+}
+
+.read__content .section__text {
+  font-size: .90625rem;
+  line-height: 1.5;
+  color: #585856;
+}
+
+@media (min-width: 48em) {
+  .read__content .section__text {
+    font-size: 1rem;
+  }
+}
+
+.read__content .section__cite {
+  font-size: .90625rem;
+  line-height: 1.5;
+  text-decoration: none;
+}
+
+@media (min-width: 48em) {
+  .read__content .section__cite {
+    font-size: 1rem;
+  }
+}
+
+.read__content .section__image-holder {
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+
+code {
+  background-color: #eee;
+  border-radius: 3px;
+  font-family: courier, monospace;
+  padding: 0 3px;
+}
+
+.toc__holder {
+  width: 100%;
+  text-align: right;
+  padding-right: 2rem;
+}
+
+.toc__multimodal > a, .toc__dataset > a {
+  color: #585856;
+  transition: color 300ms ease-in-out;
+}
+
+.toc__multimodal-active {
+  color: #48a090;
+  text-decoration: none;
+}
+
+.toc__dataset-active {
+  color: #cf3327;
+  text-decoration: none;
 }
 /*# sourceMappingURL=style.css.map */

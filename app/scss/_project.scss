@@ -75,14 +75,14 @@
 
     &__description {
         text-align: left;
-        font-size: .8125rem;
+        font-size: .875rem;
         line-height: 1.5;
         overflow: hidden;
-        max-height: 3.5rem;
+        max-height: 3.75rem;
 
         @include breakpoint-up(medium) {
-            font-size: .875rem;
-            max-height: 2.65rem;
+            font-size: 1rem;
+            max-height: 2.85rem;
         }
     }
 
@@ -99,7 +99,6 @@
     }
 
     &__go-to {
-        // padding-top: 2.5rem;
 
         &__holder {
             width: 120px;

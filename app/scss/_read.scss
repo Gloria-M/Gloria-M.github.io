@@ -1,0 +1,154 @@
+.read{
+    background-color: $light;
+
+    &__grid{
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+
+        @include breakpoint-up(medium) {
+            display: flex;
+        }
+    }
+
+    .toc-item{
+        width: 100%;
+        text-align: left;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+        
+        @include breakpoint-up(medium) {
+            flex: 1;
+            flex-basis: 30%;
+            text-align: right;
+            padding-top: 3rem;
+            padding-right: 3rem;
+        }
+    }
+
+    .content-item{
+        width: 100%;
+        max-width: 42rem;
+        padding-top: 3rem;
+        
+        @include breakpoint-up(medium) {
+            flex: 1;
+            flex-basis: 70%;
+            max-width: 100%;
+        }
+    }
+
+    &__intro{
+        width: 100%;
+
+        .intro-item{
+
+            @include breakpoint-up(medium) {
+                display: flex;
+                align-items: flex-end;
+            }
+
+            &__title{
+                font-size: 1.25rem;
+                font-weight: 400;
+                text-align: left;
+                color: $dark;
+    
+                @include breakpoint-up(medium) {
+                    flex-basis: 80%;
+                    font-size: 1.375rem;
+                }
+            }
+
+            &__to-code{
+                font-size: .8125rem;
+                text-align: right;
+                padding-bottom: 1rem;
+    
+                @include breakpoint-up(medium) {
+                    flex-basis: 20%;
+                    font-size: .875rem;
+                    padding-bottom: 0;
+                }
+            }
+        }
+        
+    }    
+
+    &__sep-holder{
+        padding: .15rem 0 .15rem 0;
+
+        @include breakpoint-up(medium) {
+        padding: .25rem 0 1rem 0;
+        }
+    }
+
+    &__separator{
+        width: 100%;
+        height: 1px;
+    }
+
+    &__content{
+        text-align: left;
+
+        .section{
+
+            &__holder{
+                padding: .25rem 0 .15rem 0;
+    
+                @include breakpoint-up(medium) {
+                    padding: .25rem 0 .5rem 0;
+                }
+            }
+
+            &__title{
+                width: 75%;
+                font-size: .975rem;
+                font-weight: 400;
+                color: $dark;
+    
+                @include breakpoint-up(medium) {
+                    font-size: 1.125rem;
+                }
+            }
+
+            &__separator{
+                width: 75%;
+                height: 1px;
+                text-align: left;
+            }
+
+            &__text{
+                font-size: .90625rem;
+                line-height: 1.5;
+                color: $dark;
+    
+                @include breakpoint-up(medium) {
+                    font-size: 1rem;
+                }
+            }
+
+            &__cite{
+                font-size: .90625rem;
+                line-height: 1.5;
+                text-decoration: none;
+    
+                @include breakpoint-up(medium) {
+                    font-size: 1rem;
+                }
+            }
+
+            &__image-holder{
+                text-align: center;
+                // padding-top: .15rem;
+                padding-bottom: 1.5rem;
+            }
+        }
+    }
+}
+
+code {
+    background-color: #eee;
+    border-radius: 3px;
+    font-family: courier, monospace;
+    padding: 0 3px;
+  }

@@ -1,0 +1,28 @@
+.toc {
+
+    &__holder {
+        width: 100%;
+        text-align: right;
+        padding-right: 2rem;
+        
+    }
+
+    &__multimodal,
+    &__dataset {
+
+        >a {
+            color: $dark;
+            transition: color 300ms ease-in-out;
+        }
+    }
+
+    &__multimodal-active {
+        color: $multimodalColor;
+        text-decoration: none;
+    }
+
+    &__dataset-active {
+        color: $datasetColor;
+        text-decoration: none;
+    }
+}

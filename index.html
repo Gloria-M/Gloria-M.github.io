@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images2/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/dist/style.css">
+  <title>Gloria M.</title>
+
+</head>
+
+<body>
+
+  <div class="nav-back"></div>
+  <header class="header">
+    <div class="overlay has-fade"></div>
+    <nav class="container container--pall flex flex-jc-sb flex-ai-c">
+      <a href="/" class="header__logo">
+        <img src="images/logo.svg" alt="Easybank">
+      </a>
+
+      <a id="btnHamburger" href="#" class="header__toggle hide-for-desktop">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+
+      <div class="header__links hide-for-mobile">
+        <a href="#"><img src="/images/logo_linkedin.svg"></a>
+        <a href="#"><img src="/images/logo_github.svg"></a>
+      </div>
+    </nav>
+
+    <div class="header__menu has-fade">
+      <a href="#"><img src="/images/logo_linkedin.svg"></a>
+      <a href="#"><img src="/images/logo_github.svg"></a>
+    </div>
+
+  </header>
+
+  <section class="project">
+    <div class="container container--pall">
+
+      <div class="project__grid">
+
+        <div class="project__item">
+          <div class="project__image">
+              <img src="/images/FusionNet.png">
+          </div>
+        </div>
+        <div class="project__item">
+          <div class="project__separator multimodal-bg"></div>
+          <div class="project__title">
+            Music Emotion Recognition using multi-modal Neural Networks
+          </div>
+          <div class="project__description">
+              Two experiments are presented, as follows: the first experiment consists in the fusion of the models trained on audio features and on lyrics features, respectively and the second experiment consists in a configuration incorporating the model trained on audio features and the model trained on comments features.
+          </div>
+          <div class="project__read-more">
+            <a class="multimodal-text" href="#">... Continue reading</a>
+          </div>
+          <div class="project__go-to project__go-to__holder">
+            <a href="#" class="button project__go-to__btn project__go-to__btn__multimodal" href="https://github.com/Gloria-M/multi-modal-MER" target="_blank"  rel="noopener noreferrer">
+              Go to code
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      
+
+      <div class="project__grid">
+
+        <div class="project__item">
+          <div class="project__image">
+              <img src="/images/HowPeopleListenToMusic.png">
+          </div>
+        </div>
+        <div class="project__item">
+          <div class="project__separator dataset-bg"></div>
+          <div class="project__title">
+            New Dataset for multi-modal Music Emotion Recognition
+          </div>
+          <div class="project__description">
+            From the desire to model as accurate as possible the timeline described by humans
+            when listening to music, emerged the necessity of creating a new dataset, to provide
+            support for recognizing emotions not only from audio features, but also from lyrics and comments features.
+            The annotations are represented by scores in the two dimensions of emotion —valence and arousal— and
+            lists of emotion-related word & count tuples.
+          </div>
+          <div class="project__read-more">
+            <a class="dataset-text" href="#">... Continue reading</a>
+          </div>
+          <div class="project__go-to project__go-to__holder">
+            <a href="#" class="button project__go-to__btn project__go-to__btn__dataset" href="https://github.com/Gloria-M/multimodal-MER-dataset" target="_blank"  rel="noopener noreferrer">
+              Go to data
+            </a>
+          </div>
+        </div>
+        
+      </div>
+
+    </div>
+  </section>
+
+  <script src="/app/js/script.js"></script>
+</body>
+
+</html>

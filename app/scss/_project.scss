@@ -1,0 +1,152 @@
+.project {
+    background-color: $light;
+
+    &__grid {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+
+        @include breakpoint-up(medium) {
+            display: flex;
+            align-items: center;
+            // justify-content: center;
+        }
+    }
+
+    &__image {
+        padding: 0 1rem;
+        text-align: center;
+
+        img {
+            max-width: 480px;
+            width: 100%;
+
+            @include breakpoint-up(medium) {
+                padding: 0 0;
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+    }
+
+    &__item {
+        padding: .9375rem;
+
+        @include breakpoint-up(medium) {
+            flex: 1;
+        }
+    }
+
+    &__separator {
+        text-align: center;
+        height: 2px;
+        margin-top: .5rem;
+        margin-right: 2.5rem;
+        margin-bottom: .5rem;
+        margin-left: 2.5rem;
+
+        @include breakpoint-up(medium) {
+            width: 135%;
+            text-align: right;
+            margin-top: 1.5rem;
+            margin-right: 0;
+            margin-bottom: .75rem;
+            margin-left: -35%;
+        }
+    }
+
+    &__title {
+        text-align: center;
+        font-size: 1.1rem;
+        font-weight: 400;
+        line-height: 1.125;
+        color: $dark;
+        margin-bottom: 1.25rem;
+
+        @include breakpoint-up(medium) {
+            font-size: 1.25rem;
+            text-align: right;
+            margin-bottom: 1.5rem;
+        }
+
+        @include breakpoint-up(large) {
+            margin-bottom: 2.5rem;
+        }
+    }
+
+    &__description {
+        text-align: left;
+        font-size: .8125rem;
+        line-height: 1.5;
+        overflow: hidden;
+        max-height: 3.5rem;
+
+        @include breakpoint-up(medium) {
+            font-size: .875rem;
+            max-height: 2.65rem;
+        }
+    }
+
+    &__read-more {
+        text-align: left;
+        font-size: .8125rem;
+        line-height: 1.5;
+        padding-bottom: 1.5rem;
+
+        @include breakpoint-up(medium) {
+            font-size: .875rem;
+            padding-bottom: 2.5rem;
+        }
+    }
+
+    &__go-to {
+        // padding-top: 2.5rem;
+
+        &__holder {
+            width: 120px;
+            height: 1rem;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+
+            @include breakpoint-up(medium) {
+                text-align: right;
+                height: 1.25rem;
+                margin-left: calc(100% - 120px);
+            }
+        }
+
+        &__btn{
+            text-align: center;
+            font-size: .75rem;
+            padding: .15rem .75rem;
+            color: $dark;
+            // text-transform: uppercase;
+            text-decoration: none;
+
+            @include breakpoint-up(medium) {
+                font-size: .8125rem;
+            }
+
+            &:hover{
+                border-color: $dark;
+            }
+
+            &__dataset{
+                border-color: $datasetColor;
+
+                &:hover{
+                    background-color: $datasetColorT40;
+                }
+            }
+
+            &__multimodal{
+                border-color: $multimodalColor;
+
+                &:hover{
+                    background-color: $multimodalColorT40;
+                }
+            }
+        }
+
+    }
+}

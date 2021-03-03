@@ -76,7 +76,7 @@
         left: 50%;
         transform: translateX(-50%);
         background: $white;
-        margin-top: 1.5rem;
+        margin-top: 5.875rem;
         padding: 1.625rem;
         border-radius: 5px;
 
@@ -97,9 +97,6 @@
 
         a {
             position: relative;
-            font-size: $font-sm;
-            color: $grayishBlue;
-            transition: color 300ms ease-in-out;
 
             &:not(:last-child) {
                 margin-right: 32px;

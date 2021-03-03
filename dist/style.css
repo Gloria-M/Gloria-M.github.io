@@ -57,7 +57,6 @@ body {
   font-weight: 300;
   color: #9698a6;
   line-height: 1.25;
-  min-height: 200vh;
 }
 
 @media (min-width: 64em) {
@@ -295,7 +294,7 @@ button, .button {
   left: 50%;
   transform: translateX(-50%);
   background: #ffffff;
-  margin-top: 1.5rem;
+  margin-top: 5.875rem;
   padding: 1.625rem;
   border-radius: 5px;
 }
@@ -314,9 +313,6 @@ button, .button {
 
 .header__links a {
   position: relative;
-  font-size: 0.875rem;
-  color: #9698a6;
-  transition: color 300ms ease-in-out;
 }
 
 .header__links a:not(:last-child) {

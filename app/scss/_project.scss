@@ -1,5 +1,7 @@
 .project {
     background-color: $light;
+    height: 100vh;
+    overflow: scroll;
 
     &__grid {
         padding-top: 2.5rem;

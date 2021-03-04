@@ -138,6 +138,20 @@ button, .button{
 
 // Visibility
 
+.hide-for-xsmall{
+    // hide for tablet and mobile
+    @include breakpoint-down(xsmall){
+        display: none;
+    }
+}
+
+.hide-for-medium{
+    // hide for tablet and mobile
+    @include breakpoint-up(small){
+        display: none;
+    }
+}
+
 .hide-for-mobile{
     // hide for tablet and mobile
     @include breakpoint-down(small){
@@ -161,11 +175,6 @@ button, .button{
     color: $datasetColor;
 }
 
-// .dataset-cite{
-//     color: $datasetColor;
-//     text-decoration: None;
-// }
-
 // Multi-modal MER
 .multimodal-bg{
     background-color: $multimodalColor;
@@ -173,8 +182,3 @@ button, .button{
 .multimodal-text{
     color: $multimodalColor;
 }
-
-// .multimodal-cite{
-//     color: $multimodalColor;
-//     text-decoration: None;
-// }

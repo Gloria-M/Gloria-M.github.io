@@ -6,6 +6,8 @@ const fadeElems = document.querySelectorAll('.has-fade');
 
 btnHamburger.addEventListener('click', function(){
 
+    var pos = window.scrollY;
+
     if(header.classList.contains('open')){ // Colse hamburger menu
         body.classList.remove('no-scroll');
         header.classList.remove('open');  

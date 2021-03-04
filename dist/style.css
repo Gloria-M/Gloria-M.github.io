@@ -41,13 +41,14 @@
 }
 
 html {
+  scroll-behavior: smooth;
   font-size: 100%;
   box-sizing: border-box;
-  scroll-behavior: smooth;
 }
 
 *, *::before, *::after {
   box-sizing: inherit;
+  scroll-behavior: inherit;
 }
 
 body {
@@ -187,7 +188,7 @@ p {
 
 button, .button {
   display: inline-block;
-  border-radius: 0px;
+  border-radius: 3px;
   border-width: 1px;
   border-style: solid;
   cursor: pointer;
@@ -430,7 +431,7 @@ button, .button {
 .project__title {
   text-align: center;
   font-size: 1.1rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.125;
   color: #585856;
   margin-bottom: 1.25rem;
@@ -549,7 +550,7 @@ button, .button {
 .read .toc-item {
   width: 100%;
   text-align: left;
-  padding-top: 1rem;
+  padding-top: 0rem;
   padding-bottom: 2rem;
 }
 
@@ -559,7 +560,8 @@ button, .button {
     flex-basis: 30%;
     text-align: right;
     padding-top: 3rem;
-    padding-right: 3rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
   }
 }
 
@@ -574,6 +576,7 @@ button, .button {
     flex: 1;
     flex-basis: 70%;
     max-width: 100%;
+    padding-left: 1rem;
   }
 }
 
@@ -590,7 +593,7 @@ button, .button {
 
 .read__intro .intro-item__title {
   font-size: 1.25rem;
-  font-weight: 400;
+  font-weight: 600;
   text-align: left;
   color: #585856;
 }
@@ -633,6 +636,10 @@ button, .button {
 
 .read__content {
   text-align: left;
+}
+
+.read__content .section__anchor-space {
+  scroll-margin-top: 4.375rem;
 }
 
 .read__content .section__holder {
@@ -703,21 +710,88 @@ code {
 .toc__holder {
   width: 100%;
   text-align: right;
-  padding-right: 2rem;
 }
 
-.toc__multimodal > a, .toc__dataset > a {
+.toc__list {
+  position: fixed;
+  max-width: 25%;
+  top: 10rem;
+  list-style-type: none;
+}
+
+.toc__list > li {
+  margin-top: .75rem;
+  margin-bottom: .75rem;
+}
+
+.toc__btn {
+  text-align: right;
+  font-size: .875rem;
+  padding: 0 0;
+  padding-right: .35rem;
   color: #585856;
-  transition: color 300ms ease-in-out;
+  border-right: 2px solid #58585699;
 }
 
-.toc__multimodal-active {
+.toc__btn__dataset:hover {
+  color: #cf3327;
+  border-right: 2px solid #cf332766;
+}
+
+.toc__btn__multimodal:hover {
   color: #48a090;
+  border-right: 2px solid #48a09066;
+}
+
+.toc__dataset > a, .toc__multimodal > a {
+  font-size: .875rem;
+  color: #585856;
+}
+
+.toc__dataset > a:hover, .toc__multimodal > a:hover {
   text-decoration: none;
 }
 
-.toc__dataset-active {
+.toc-mobile__holder {
+  width: 100%;
+  text-align: left;
+}
+
+.toc-mobile__list {
+  list-style-type: none;
+}
+
+.toc-mobile__list > li {
+  margin-top: .75rem;
+  margin-bottom: .75rem;
+  padding-left: .35rem;
+}
+
+.toc-mobile__btn {
+  text-align: left;
+  font-size: .875rem;
+  padding: 0 0;
+  padding-left: .35rem;
+  color: #585856;
+  border-left: 2px solid #58585699;
+}
+
+.toc-mobile__btn__dataset:hover {
   color: #cf3327;
+  border-left: 2px solid #cf332766;
+}
+
+.toc-mobile__btn__multimodal:hover {
+  color: #48a090;
+  border-left: 2px solid #48a09066;
+}
+
+.toc-mobile__dataset > a, .toc-mobile__multimodal > a {
+  font-size: .875rem;
+  color: #585856;
+}
+
+.toc-mobile__dataset > a:hover, .toc-mobile__multimodal > a:hover {
   text-decoration: none;
 }
 /*# sourceMappingURL=style.css.map */

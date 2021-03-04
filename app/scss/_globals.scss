@@ -1,11 +1,12 @@
 html{
+    scroll-behavior: smooth;
     font-size: 100%;
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
 *, *::before, *::after{
     box-sizing: inherit;
+    scroll-behavior: inherit;
 }
 
 body{
@@ -129,7 +130,7 @@ p {
 // Buttons
 button, .button{
     display: inline-block;
-    border-radius: 0px;
+    border-radius: 3px;
     border-width: 1px;
     border-style: solid;
     cursor: pointer;

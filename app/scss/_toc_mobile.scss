@@ -1,0 +1,53 @@
+.toc-mobile {
+
+    &__holder {
+        width: 100%;
+        text-align: left;
+    }
+
+    &__list {
+        list-style-type: none;
+
+        >li {
+            margin-top: .75rem;
+            margin-bottom: .75rem;
+            padding-left: .35rem;
+        }
+    }
+
+    &__btn{
+        text-align: left;
+        font-size: .875rem;
+        padding: 0 0;
+        padding-left: .35rem;;
+        color: $dark;
+        border-left: 2px solid $darkT60;
+
+        &__dataset{
+
+            &:hover{
+                color: $datasetColor;
+                border-left: 2px solid $datasetColorT40;
+            }
+        }
+
+        &__multimodal{
+
+            &:hover{
+                color: $multimodalColor;
+                border-left: 2px solid $multimodalColorT40;
+            }
+        }
+    }
+
+    &__dataset, &__multimodal{
+        >a {
+            font-size: .875rem;
+            color: $dark;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}

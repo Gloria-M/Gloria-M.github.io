@@ -83,8 +83,17 @@
         a{
             display: block;
             padding: .625rem;
+            font-size: 1.125rem;
+            font-weight: 400;
             color: $dark;
+            text-decoration: none;
             text-align: center;
+            opacity: 1;
+            transition: opacity 300ms ease-in-out;
+
+            &:hover {
+                opacity: .5;
+            }
         }
 
         img{
@@ -96,7 +105,13 @@
     &__links {
 
         a {
+            font-size: 1.125rem;
+            font-weight: 400;
+            color: $dark;
+            text-decoration: none;
             position: relative;
+            opacity: 1;
+            transition: opacity 300ms ease-in-out;
 
             &:not(:last-child) {
                 margin-right: 32px;
@@ -116,7 +131,7 @@
             }
 
             &:hover {
-                color: $darkBlue;
+                opacity: .5;
 
                 &::before {
                     opacity: 1;
@@ -125,6 +140,7 @@
         }
 
         img{
+            margin-bottom: -.25rem;
             width: 20px;
             height: auto;
         }

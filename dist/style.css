@@ -308,8 +308,17 @@ button, .button {
 .header__menu a {
   display: block;
   padding: .625rem;
+  font-size: 1.125rem;
+  font-weight: 400;
   color: #585856;
+  text-decoration: none;
   text-align: center;
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
+}
+
+.header__menu a:hover {
+  opacity: .5;
 }
 
 .header__menu img {
@@ -318,7 +327,13 @@ button, .button {
 }
 
 .header__links a {
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: #585856;
+  text-decoration: none;
   position: relative;
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
 }
 
 .header__links a:not(:last-child) {
@@ -339,7 +354,7 @@ button, .button {
 }
 
 .header__links a:hover {
-  color: #5d65a2;
+  opacity: .5;
 }
 
 .header__links a:hover::before {
@@ -347,6 +362,7 @@ button, .button {
 }
 
 .header__links img {
+  margin-bottom: -.25rem;
   width: 20px;
   height: auto;
 }

@@ -538,6 +538,10 @@ button, .button {
   background-color: #cf332766;
 }
 
+.project__go-to__btn__dataset:active {
+  background-color: transparent;
+}
+
 .project__go-to__btn__multimodal {
   border-color: #48a090;
 }

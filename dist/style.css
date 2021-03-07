@@ -538,7 +538,7 @@ button, .button {
   background-color: #cf332766;
 }
 
-.project__go-to__btn__dataset:active {
+.project__go-to__btn__dataset:focus {
   background-color: transparent;
 }
 

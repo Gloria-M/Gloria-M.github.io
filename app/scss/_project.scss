@@ -139,7 +139,7 @@
                     background-color: $datasetColorT40;
                 }
 
-                &:active{
+                &:focus{
                     background-color: transparent;
                 }
             }

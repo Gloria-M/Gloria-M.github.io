@@ -235,6 +235,14 @@ button, .button {
   color: #48a090;
 }
 
+.sr-bg {
+  background-color: #1a1416;
+}
+
+.sr-text {
+  color: #1a1416;
+}
+
 .header.open .header__toggle > span:first-child {
   transform: rotate(45deg);
 }
@@ -544,6 +552,14 @@ button, .button {
 
 .project__go-to__btn__multimodal:hover {
   background-color: #48a09066;
+}
+
+.project__go-to__btn__sr {
+  border-color: #1a1416;
+}
+
+.project__go-to__btn__sr:hover {
+  background-color: #1a141466;
 }
 
 .read {

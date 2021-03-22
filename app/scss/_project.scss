@@ -147,6 +147,14 @@
                     background-color: $multimodalColorT40;
                 }
             }
+
+            &__sr{
+                border-color: $srColor;
+
+                &:hover{
+                    background-color: $srColorT40;
+                }
+            }
         }
 
     }

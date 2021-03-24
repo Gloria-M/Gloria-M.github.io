@@ -771,7 +771,7 @@ code {
 .toc__list {
   position: fixed;
   max-width: 25%;
-  top: 7rem;
+  top: 10rem;
   list-style-type: none;
 }
 
@@ -783,7 +783,7 @@ code {
 .toc__list-long {
   position: fixed;
   max-width: 25%;
-  top: 4rem;
+  top: 8rem;
   list-style-type: none;
 }
 

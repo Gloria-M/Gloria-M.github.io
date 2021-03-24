@@ -3,6 +3,7 @@
     &__holder {
         width: 100%;
         text-align: left;
+        margin-top: -2.5rem;;
     }
 
     &__list {
@@ -36,6 +37,56 @@
             &:hover{
                 color: $multimodalColor;
                 border-left: 2px solid $multimodalColorT40;
+            }
+        }
+    }
+
+    &__btn-sub{
+        text-align: left;
+        font-size: .875rem;
+        padding: 0 0;
+        padding-left: .35rem;;
+        color: $dark;
+        border-left: 6px solid $darkT40;
+
+        &__dataset{
+
+            &:hover{
+                color: $datasetColor;
+                border-left: 6px solid $datasetColorT40;
+            }
+        }
+
+        &__multimodal{
+
+            &:hover{
+                color: $multimodalColor;
+                border-left: 6px solid $multimodalColorT40;
+            }
+        }
+    }
+
+    &__btn-ssub{
+        text-align: left;
+        font-size: .875rem;
+        padding: 0 0;
+        padding-left: .35rem;;
+        color: $dark;
+        border-left: 10px solid $darkT40;
+
+        &__dataset{
+
+            &:hover{
+                color: $datasetColor;
+                border-left: 10px solid $datasetColorT40;
+            }
+        }
+
+        &__multimodal{
+
+            &:hover{
+                color: $multimodalColor;
+                border-left: 10px solid $multimodalColorT40;
             }
         }
     }

@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="/dist/style.css">
-    <title>New Dataset for multi-modal Music Emotion Recognition</title>
+    <title>Analysis of unimodal Music Emotion Recognition using audio features</title>
 
 </head>
 
@@ -32,16 +32,16 @@
 
             <div class="header__links hide-for-xsmall">
                 <a href="/">Projects</a>
-                <a href="#"><img src="/images/logo_linkedin.svg"></a>
-                <a href="https://github.com/Gloria-M?tab=repositories" target="_blank" rel="noopener noreferrer"><img
+                <a href="https://linkedin.com/in/gloria-ruxandra-maciuca-a60043135" target="_blank" rel="noopener noreferrer"><img src="/images/logo_linkedin.svg"></a>
+                <a href="https://github.com/Gloria-M" target="_blank" rel="noopener noreferrer"><img
                         src="/images/logo_github.svg"></a>
             </div>
         </nav>
 
         <div class="header__menu has-fade">
             <a href="/">Projects</a>
-            <a href="#"><img src="/images/logo_linkedin.svg"></a>
-            <a href="https://github.com/Gloria-M?tab=repositories" target="_blank" rel="noopener noreferrer"><img
+            <a href="https://linkedin.com/in/gloria-ruxandra-maciuca-a60043135" target="_blank" rel="noopener noreferrer"><img src="/images/logo_linkedin.svg"></a>
+            <a href="https://github.com/Gloria-M" target="_blank" rel="noopener noreferrer"><img
                     src="/images/logo_github.svg"></a>
         </div>
 
@@ -54,7 +54,7 @@
 
                 <div class="toc-item hide-for-mobile">
                     <div class="toc__holder">
-                        <ul class="toc__list">
+                        <ul class="toc__list-long">
                             <li class="toc__dataset">
                                 <a href="#intro">
                                     <div class="toc__btn toc__btn__dataset">
@@ -65,56 +65,84 @@
                             <li class="toc__dataset">
                                 <a href="#s0">
                                     <div class="toc__btn toc__btn__dataset">
-                                        How do people listen to music
+                                        Feature Extraction
                                     </div>
                                 </a>
                             </li>
                             <li class="toc__dataset">
                                 <a href="#s1">
                                     <div class="toc__btn toc__btn__dataset">
-                                        Emotion Representation
+                                        Dataset
                                     </div>
                                 </a>
                             </li>
                             <li class="toc__dataset">
                                 <a href="#s2">
                                     <div class="toc__btn toc__btn__dataset">
-                                        Base Dataset
+                                        Experiments
                                     </div>
                                 </a>
                             </li>
                             <li class="toc__dataset">
                                 <a href="#s3">
-                                    <div class="toc__btn toc__btn__dataset">
-                                        Lyrics&Comments Gathering
+                                    <div class="toc__btn-sub toc__btn-sub__dataset">
+                                        Original Dataset
                                     </div>
                                 </a>
                             </li>
                             <li class="toc__dataset">
                                 <a href="#s4">
-                                    <div class="toc__btn toc__btn__dataset">
-                                        Annotation
+                                    <div class="toc__btn-ssub toc__btn-ssub__dataset">
+                                        2D-output Configuration
                                     </div>
                                 </a>
                             </li>
                             <li class="toc__dataset">
                                 <a href="#s5">
-                                    <div class="toc__btn toc__btn__dataset">
-                                        Deezer Tracks Selection
+                                    <div class="toc__btn-ssub toc__btn-ssub__dataset">
+                                        1D-output Configurations
                                     </div>
                                 </a>
                             </li>
                             <li class="toc__dataset">
                                 <a href="#s6">
-                                    <div class="toc__btn toc__btn__dataset">
-                                        Lyrics Cleaning
+                                    <div class="toc__btn-ssub toc__btn-ssub__dataset">
+                                        Results
                                     </div>
                                 </a>
                             </li>
                             <li class="toc__dataset">
                                 <a href="#s7">
+                                    <div class="toc__btn-sub toc__btn-sub__dataset">
+                                        Augmented Dataset
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="toc__dataset">
+                                <a href="#s8">
+                                    <div class="toc__btn-ssub toc__btn-ssub__dataset">
+                                        2D-output Configuration
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="toc__dataset">
+                                <a href="#s9">
+                                    <div class="toc__btn-ssub toc__btn-ssub__dataset">
+                                        1D-output Configurations
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="toc__dataset">
+                                <a href="#s10">
+                                    <div class="toc__btn-ssub toc__btn-ssub__dataset">
+                                        Results
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="toc__dataset">
+                                <a href="#s11">
                                     <div class="toc__btn toc__btn__dataset">
-                                        Lyrics&Comments Processing
+                                        Comparative Analysis
                                     </div>
                                 </a>
                             </li>
@@ -126,7 +154,7 @@
                     <div class="read__intro">
                         <div class="intro-item">
                             <div class="intro-item__title">
-                                New Dataset for multi-modal Music Emotion Recognition
+                                Analysis of unimodal Music Emotion Recognition using audio features
                             </div>
 
                             <div class="read__sep-holder hide-for-desktop">
@@ -135,8 +163,8 @@
 
                             <div class="intro-item__to-code dataset-text">
                                 [
-                                <a class="dataset-text" href="https://github.com/Gloria-M/multimodal-MER-dataset"
-                                    target="_blank" rel="noopener noreferrer">Go to dataset</a>
+                                <a class="dataset-text" href="https://github.com/Gloria-M/unimodal-MER" target="_blank"
+                                    rel="noopener noreferrer">Go to code</a>
                                 ]
                             </div>
                         </div>
@@ -152,13 +180,21 @@
                         <div id="intro" class="section__anchor-space"></div>
                         <div class="section__holder">
                             <p class="section__text">
-                                From the desire to model as accurate as possible the timeline described by humans when
-                                listening to music, emerged the necessity of creating a new dataset, to provide support
-                                for
-                                recognizing emotions not only from audio features, but also from lyrics and comments
-                                features.
-                                The annotations are represented by scores in the two dimensions of emotion —valence and
-                                arousal— and lists of emotion-related word & count tuples.
+                                The task of recognizing emotion in music, based on MFCCs features extracted from raw
+                                audio, was tackled from different perspectives and using Deep Neural Networks, aiming to
+                                gain insights into the field of Music Information Retrieval.
+                                Considering it a regression problem —predicting real values for valence and arousal— two
+                                approaches are studied: first, a single model is trained to predict both valence and
+                                arousal (further referred to as <b><em>2D-output</em></b>) and second, a group of two
+                                models is trained, to separately predict valence and arousal, respectively (further
+                                referred to as <b><em>1D-output</em></b>).
+                                Each approach is further extended to two experiments, the first involving training on
+                                the dataset as it is and the second involving augmentation of the original dataset prior
+                                to training.
+                                This project illustrates, through a comparative analysis of these
+                                experiments, the effects an imbalanced dataset has on the learning process, resulting in
+                                a collection of methods and observations, to be used further as starting point for a
+                                more comprehensive research.
                             </p>
                         </div>
 
@@ -170,56 +206,56 @@
                                     <li class="toc-mobile__dataset">
                                         <a href="#s0">
                                             <div class="toc-mobile__btn toc-mobile__btn__dataset">
-                                                How do people listen to music
+                                                Feature Extraction
                                             </div>
                                         </a>
                                     </li>
                                     <li class="toc-mobile__dataset">
                                         <a href="#s1">
                                             <div class="toc-mobile__btn toc-mobile__btn__dataset">
-                                                Emotion Representation
+                                                Dataset
                                             </div>
                                         </a>
                                     </li>
                                     <li class="toc-mobile__dataset">
                                         <a href="#s2">
                                             <div class="toc-mobile__btn toc-mobile__btn__dataset">
-                                                Base Dataset
+                                                Experiments
                                             </div>
                                         </a>
                                     </li>
                                     <li class="toc-mobile__dataset">
                                         <a href="#s3">
-                                            <div class="toc-mobile__btn toc-mobile__btn__dataset">
-                                                Lyrics&Comments Gathering
+                                            <div class="toc-mobile__btn-sub toc-mobile__btn-sub__dataset">
+                                                Original Dataset
                                             </div>
                                         </a>
                                     </li>
                                     <li class="toc-mobile__dataset">
                                         <a href="#s4">
-                                            <div class="toc-mobile__btn toc-mobile__btn__dataset">
-                                                Annotation
+                                            <div class="toc-mobile__btn-ssub toc-mobile__btn-ssub__dataset">
+                                                2D-output Configuration
                                             </div>
                                         </a>
                                     </li>
                                     <li class="toc-mobile__dataset">
                                         <a href="#s5">
-                                            <div class="toc-mobile__btn toc-mobile__btn__dataset">
-                                                Deezer Tracks Selection
+                                            <div class="toc-mobile__btn-ssub toc-mobile__btn-ssub__dataset">
+                                                1D-output Configurations
                                             </div>
                                         </a>
                                     </li>
                                     <li class="toc-mobile__dataset">
                                         <a href="#s6">
-                                            <div class="toc-mobile__btn toc-mobile__btn__dataset">
-                                                Lyrics Cleaning
+                                            <div class="toc-mobile__btn-ssub toc-mobile__btn-ssub__dataset">
+                                                Results
                                             </div>
                                         </a>
                                     </li>
                                     <li class="toc-mobile__dataset">
-                                        <a href="#s7">
+                                        <a href="#s11">
                                             <div class="toc-mobile__btn toc-mobile__btn__dataset">
-                                                Lyrics&Comments Processing
+                                                Comparative Analysis
                                             </div>
                                         </a>
                                     </li>
@@ -230,446 +266,451 @@
                         <div id="s0" class="section__anchor-space"></div>
                         <div class="section__holder">
                             <div class="section__title">
-                                How do people listen to music
+                                Feature Extraction
                             </div>
                             <div class="section__separator dataset-bg"></div>
                             <p class="section__text">
-                                Referring to the relation between the melody/audio dimension and the lyrics dimension,
-                                the question "How do people listen to music?" seems to preoccupy individuals, as it was
-                                answered on various forums and surveys:
-                                <ul class="section__text">
-                                    <li>
-                                        "Do you pay more attention to the music or the lyrics?"
-                                        <a class="section__cite dataset-text"
-                                            href="https://v1.escapistmagazine.com/forums/read/18.404863-Poll-Do-you-pay-more-attention-to-the-music-or-the-lyrics"
-                                            target="_blank" rel="noopener noreferrer">
-                                            [Escapist]
-                                        </a>
-                                    </li>
-                                    <li>
-                                        "Do people generally pay attention to the lyrics in music?"
-                                        <a class="section__cite dataset-text"
-                                            href="https://www.quora.com/Do-people-generally-pay-attention-to-the-lyrics-in-music"
-                                            target="_blank" rel="noopener noreferrer">
-                                            [Quora]
-                                        </a>
-                                    </li>
-                                    <li>
-                                        "Do you often find meaning or inspiration in lyrics, or are you more interested
-                                        in the music or beat?"
-                                        <a class="section__cite dataset-text"
-                                            href="https://learning.blogs.nytimes.com/2014/01/10/how-closely-do-you-listen-to-song-lyrics/"
-                                            target="_blank" rel="noopener noreferrer">
-                                            [NYTimes]
-                                        </a>
-                                    </li>
-                                    <li>
-                                        "Anyone else listen to music just for music?"
-                                        <a class="section__cite dataset-text"
-                                            href="https://www.reddit.com/r/Music/comments/eiq08/when_i_listen_to_music_i_dont_pay_attention_to/"
-                                            target="_blank" rel="noopener noreferrer">
-                                            [Reddit]
-                                        </a>
-                                    </li>
-                                </ul>
+                                The changes in amplitude over time (waveforms), representing music in its raw form, do
+                                not hold sufficient information for the emotion recognition task, such that feature
+                                extraction processes must be performed before feeding the data to a neural network.
                             </p>
                             <p class="section__text">
-                                Reading these opinions, patterns of the musical experience can be extracted and analysed. While the importance given to lyrics and solely audio may differ at first auditions, for most of the respondents listening and paying attention to the lyrics comes closely followed by trying to understand their meaning.
-                                One comment that puts these observations in a beautiful and concluding form is <b><em>"enjoying the music will always be instinctual, while appreciating lyrics will always be intellectual"</em></b>.
+                                In order to detect components of the audio signal, the features chosen for this study
+                                are the first 20 Mel Frequency Cepstral Coefficients (<b>MFCCs</b>). Being one of the
+                                most used representations in signal processing tasks, the MFCCs were first introduced in
+                                a 1980 study on monosyllabic word recognition
+                                <a class="section__cite dataset-text"
+                                    href="https://ieeexplore.ieee.org/document/1163420" target="_blank"
+                                    rel="noopener noreferrer">
+                                    [Davis & Mermelstein, 1980]
+                                </a>. These are low-level features derived from the short-term Fourier Transform, that
+                                detect timbral and instrumentation aspects in an audio signal and are robust to
+                                variations in recording conditions.
                             </p>
                             <p class="section__text">
-                                The summarization of the comments on this subject can also be shaped as a timeline, as shown below:
+                                The MFCCs features are extracted from the audio signal sampled at 44,100Hz/sec and
+                                divided in windows of 30ms duration without overlapping, using LibROSA, an open-source
+                                Python package for music and audio analysis.
                             </p>
-                            <div class="section__image-holder">
-                                <img src="images\HowPeopleListenToMusic.png" width=100%>
-                            </div>
                             <p class="section__text">
-                                These ideas shape the musical experience consisting in two aspects: listening —audio dimension— and understanding the meaning, that implies paying attention to the lyrics text and analysing their meaning —text dimension. This motivates the need for builing a new dataset that allows for a more comprehensive analysis and understanding of the Music Emotion Recognition task.
+                                Before using the resulting MFCCs features for training a neural network, a normalization
+                                operation must be performed. One of the most used techniques is <em><b>Cepstral Mean and
+                                        Variance Normalization</b></em>, a simple computation of subtracting the mean
+                                and dividing this result by the standard deviation.
                             </p>
                         </div>
 
                         <div id="s1" class="section__anchor-space"></div>
                         <div class="section__holder">
                             <div class="section__title">
-                                Emotion Representation
+                                Dataset
                             </div>
                             <div class="section__separator dataset-bg"></div>
                             <p class="section__text">
-                                The Circumplex Model of Affect, defined in
+                                The dataset used in this chapter is The MediaEval Database for Emotional Analysis of
+                                Music
                                 <a class="section__cite dataset-text"
-                                    href="https://www.researchgate.net/publication/235361517_A_Circumplex_Model_of_Affect"
+                                    href="https://www.researchgate.net/publication/314656874_Developing_a_benchmark_for_emotional_analysis_of_music"
                                     target="_blank" rel="noopener noreferrer">
-                                    [Russell, 1980]
-                                </a>
-                                , that maps emotions to a 2D space defined by <em>valence</em> and <em>arousal</em>
-                                dimensions. Valence, displayed as the horizontal axis, represents the energy of emotion,
-                                ranging from positive to negative, while arousal, the vertical axis, represents the
-                                amount of intensity in emotion, ranging from low to high. This scheme allows for a
-                                division of the emotion space in four quadrants.
+                                    [DEAM]
+                                </a>, consisting in 1,744 song excerpts of ~45sec duration, with two types of
+                                annotations for valence and arousal available: dynamic —measured per second— and static
+                                —measured per 45sec. The static
+                                annotations, which are used in this study, are scaled down from range 1 .. 9 to range 0
+                                .. 1.
+                                A visualization of data distribution in the 2D space of emotions shows an obvious
+                                imbalance in the four quadrants:
                             </p>
                             <div class="section__image-holder">
-                                <img src="images\circumplex_model.png" width=95%>
+                                <img src="images\deam_distribution2.png" width=100%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text">
+                                   Distribution of DEAM data in the four quadrants.
+                                </p>
                             </div>
                         </div>
 
                         <div id="s2" class="section__anchor-space"></div>
                         <div class="section__holder">
                             <div class="section__title">
-                                Base Dataset
+                                Experiments
                             </div>
                             <div class="section__separator dataset-bg"></div>
                             <p class="section__text">
-                                The largest dataset available that suits a regression approach of MER task is, at the
-                                moment of writing, the Deezer Mood Detection Dataset
-                                <a class="section__cite dataset-text" href="https://arxiv.org/abs/1809.07276"
-                                    target="_blank" rel="noopener noreferrer">
-                                    [Delbouys et al., 2018]
-                                </a>
-                                . For each track, this set contains the corresponding <b>Deezer ID</b>, the <b>MSD
-                                    ID</b>, the <b>artist</b> and <b>title</b> and values for <b>valence</b> and
-                                <b>arousal</b>. This data collected by researchers at Deezer is itself derived from the
-                                Million Song Dataset
-                                <a class="section__cite dataset-text"
-                                    href="https://www.researchgate.net/publication/220723656_The_Million_Song_Dataset"
-                                    target="_blank" rel="noopener noreferrer">
-                                    [Bertin-Mahieux et al., 2011]
-                                </a>
-                                , a common support for MIR tasks in general.
+                                The task of recognizing emotions in music is treated as a regression problem, the scope
+                                being to predict real values for valence and arousal dimensions of emotion. This
+                                strategy is further extended as follows:
+                                <ol class="section__text list-space">
+                                    <li>training a 2D-output model - predicts values for both valence and arousal</li>
+                                    <li>grouping two 1D-output models - each predicts a value for one of the valence and
+                                        arousal dimension, respectively</li>
+                                </ol>
+                            </p>
+                            <p class="section__text">
+                                There are also described two methods of working with the DEAM dataset, in the matter of
+                                data imbalance in quadrants:
+                                <ol class="section__text list-space">
+                                    <li>working with the original dataset as it is, no augmentation performed</li>
+                                    <li>augmenting the original dataset towards an equal number of samples in each
+                                        quadrant</li>
+                                </ol>
+                            </p>
+                            <p class="section__text">
+                                The configurations used to tackle this task are build considering <b><em>Convolutional
+                                        Neural Networks</em></b> architectures with 1D convolutions moving on the
+                                temporal dimension of the input and taking into account information across all channels,
+                                represented by the 20 MFCCs extracted from every windowed segment.
                             </p>
                         </div>
 
                         <div id="s3" class="section__anchor-space"></div>
                         <div class="section__holder">
                             <div class="section__title">
-                                Lyrics and Comments Gathering
+                                Original Dataset
                             </div>
                             <div class="section__separator dataset-bg"></div>
                             <p class="section__text">
-                                For building the new dataset, the first step is selecting the songs for which lyrics and
-                                comments from users are found when scraping the web. The
-                                <a class="section__cite dataset-text" href="https://songmeanings.com/" target="_blank"
-                                    rel="noopener noreferrer">
-                                    SongMeanings
-                                </a>
-                                site provides both the lyrics of the songs and comments on the meaning of the lyrics, as
-                                they are interpreted by the users.
+                                Few pre-processing steps on the audio data are required before extracting the MFCCs features: resampling the audio excerpts from DEAM dataset to the same sampling rate of 44100Hz and correcting the the differences in duration. To fix this difference, the samples longer than 45sec are cropped and in the case of the shorter samples, the last part of length equal to the difference to 45sec is copied to the right.
+                            </p>
+                            <p class="section__text">                                
+                                Using <em>librosa</em> library, the 20 MFCCs features are extracted from the waveforms, followed by normalization using Ceptral Mean and Variance normalization technique, resulting in data centered with zero mean and unit variance.
                             </p>
                             <p class="section__text">
-                                On the page of each track, the corresponding lyrics are identified by the <code
-                                    class="text-dark">div class_='holder lyric-box'</code> tag and the comments section
-                                is announced by the <code class="text-dark">div class_='text'</code> tag.
-
-                                Acquiring the comments from this website comes with an important advantage that diminish
-                                the need for additional filtering: the comments are sorted based on the number of votes
-                                in descending order with the most voted comment -the most reliable one- listed first.
-                                The comments are displayed on multiple pages, but the first one contains just enough
-                                comments of good quality, therefore only the data in the first page is collected.
-
-                                Starting with the 18,644 tracks selected by the researchers at Deezer, after performing
-                                this procedure and removing the tracks that do not appear on the website or do not have
-                                comments associated, the dataset size is reduced to 10,923 samples.a
+                                From the 1744 samples, the training is done on 80% of it and 20% is kept for testing the performance, resulting in the distribution in quadrants shown in the table below. The training and testing are done in batches of size 64, shuffled every epoch.
                             </p>
+                            <div class="section__image-holder">
+                                <img src="images\deam_sets_distr.png" width=35%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text"></p>
+                            </div>
                         </div>
 
                         <div id="s4" class="section__anchor-space"></div>
                         <div class="section__holder">
                             <div class="section__title">
-                                Annotation
+                                2D-output Configuration
                             </div>
                             <div class="section__separator dataset-bg"></div>
                             <p class="section__text">
-                                The annotation process of the new dataset is performed by following steps similar to
-                                <a class="section__cite dataset-text"
-                                    href="https://www.semanticscholar.org/paper/Lyric-Text-Mining-in-Music-Mood-Classification-Hu-Downie/e658ec86e033aae370ba680118a04431071cafe1"
-                                    target="_blank" rel="noopener noreferrer">
-                                    [Hu et al.,2009]
-                                </a>
-                                , making use of the social tags associated with songs by listeners.
-                                Mapping the tracks in the Deezer dataset to the <b>last.fm</b> database by their MSD ID,
-                                the social tags recorded in year 2011 can be retrieved. Along each tag associated with
-                                each song, a normalized value representing the number of listeners choosing the tag is
-                                provided.
+                                The features extracted have the size 20&times;1500, where the first dimension represents the number of mel-coefficients and the second dimension represents the number of windowed segments obtained from the initial signal. To be fed to the 1D CNN, these 2D images representing MFCCs features will be considered 1D images with 20 channels.
                             </p>
                             <p class="section__text">
-                                In order to create the new dataset with information as up-to-date as possible, instead
-                                of querying the 2011 tags database, the tags available at the time of writing are
-                                acquired using
-                                <a class="section__cite dataset-text" href="https://www.last.fm/api/" target="_blank"
-                                    rel="noopener noreferrer">
-                                    Last.fm API
-                                </a>
-                                . This allows access to a maximum of 100 tags per song, sorted by their popularity and
-                                the normalized value indicating the count of listeners attributing the respective tag to
-                                a song. Using this method, 10,919 tracks with tags are found.
+                                For this approach, I considered a convolutional block with a 1D-Convolution layer with kernels of size 10 and stride 1, followed by Batch normalization, ReLU activation and subsampling by applying an Average Pooling layer with kernels of size 2 and stride 2. 
                             </p>
                             <p class="section__text">
-                                The considerable volume of tags collected (795,368 unique tags) is extremely noisy and
-                                contains lot of unusable data. Therefore, to get to a format which allows mapping to
-                                emotions space, a thorough cleaning process must be performed. The musical genre,
-                                instruments names or similarity tags, along many others, are removed following the
-                                removal criteria presented, reducing the volume of social tags to 390,698:
-                                <ul class="section__text">
-                                    <li>tags containing artist name</li>
-                                    <li>tags containing song title</li>
-                                    <li>tags with similar recommendation</li>
-                                    <li>numeric tags</li>
-                                    <li>tags containing forms of word <em>favorite</em></li>
-                                    <li>tags with musical genre reference</li>
-                                    <li>tags with musical instruments reference</li>
-                                    <li>tags containing nationalities words</li>
-                                </ul>
+                                The model has an architecture composed of two such convolutional blocks, followed by another subsampling process
+                                by adding an Average Pooling layer with kernel of size 10 and stride 10, thus reducing considerably the feature maps size, as a method of preventing the overfitting to occur. 
+                                The flattened output of this layer is forwarded to a linear layer with 128 hidden units. Another regularization technique is represented by adding a Dropout layer with 50% probability. This is followed by ReLU activation and, finally, performing one more linear operation, the data is mapped to the 2D-output.
                             </p>
                             <p class="section__text">
-                                In order to select the tags akin to an emotion descriptor, a list of affect-related
-                                words must first be composed. For this process, the affective lexicon WordNet Affect
-                                <a class="section__cite dataset-text"
-                                    href="http://corpustext.com/reference/affect_wordnet.html" target="_blank"
-                                    rel="noopener noreferrer">
-                                    [Valitutti, 2004]
-                                </a>
-                                is used to create the base. This list is cleaned and extended with synonyms, related
-                                words and keywords contained in expressions describing motions, found using the
-                                comprehensive Merriam-Webster online
-                                <a class="section__cite dataset-text"
-                                    href="https://www.merriam-webster.com/dictionary/dictionary" target="_blank"
-                                    rel="noopener noreferrer">
-                                    dictionary
-                                </a>
-                                and
-                                <a class="section__cite dataset-text" href="https://www.merriam-webster.com/thesaurus"
-                                    target="_blank" rel="noopener noreferrer">
-                                    thesaurus
-                                </a>
-                                . These words are grouped according to their meaning in 27 emotional categories, named
-                                with a corresponding emotion, using similarity paths defined in WordNet
-                                <a class="section__cite dataset-text"
-                                    href="https://www.researchgate.net/publication/228902778_Revising_the_WORDNET_DOMAINS_Hierarchy_semantics_coverage_and_balancing"
-                                    target="_blank" rel="noopener noreferrer">
-                                    [Bentivogli et al., 2004]
-                                </a>
-                                and, again, the Merriam-Webster Thesaurus.
+                                Given the properties of the averaging operation, the subsampling layer in the second convolutional block and subsampling layer succeeding the convolutional blocks are respresented as a single Avgerage Pooling layer with kernels of size and stride 20.
                             </p>
                             <div class="section__image-holder">
-                                <img src="images\emotions_groups_bg.png" width=90%>
+                                <img src="images\original_cnn_2d.png" width=100%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text">
+                                    Architecture of the 2D-output model trained on the original dataset.
+                                </p>
                             </div>
                             <p class="section__text">
-                                Before going further, words related to emotions, but which, in the context of social
-                                tags, could have ambiguous or judgmental meaning are removed from the list, as suggested
-                                in
-                                <a class="section__cite dataset-text"
-                                    href="https://www.semanticscholar.org/paper/Lyric-Text-Mining-in-Music-Mood-Classification-Hu-Downie/e658ec86e033aae370ba680118a04431071cafe1"
-                                    target="_blank" rel="noopener noreferrer">
-                                    [Hu et al.,2009]
-                                </a>
-                                . Therefore, appreciation remarks such as <em>'awesome', 'bad', 'fantastic', 'good',
-                                    'great', 'horrible'</em> which refer to the quality of music and preference words
-                                like <em>'adore', 'like', 'love', 'hate'</em> which might lead to ambiguous
-                                interpretations, are removed from the list of emotion-related words.
+                                The optimization is performed using SGD for the cost computed with the MSE criterion, with scheduled decreases in learning rate. Observing the behavior of several configurations, the best strategy is learning less parameters for longer, mainly due to the fast occurrence of the overfitting phenomenon.
                             </p>
                             <p class="section__text">
-                                In order to include all possible forms of the emotion-related words, they are stemmed to
-                                a root using the Porter Stemmer functionality provided in the
-                                <a class="section__cite dataset-text" href="https://www.nltk.org/book/" target="_blank"
-                                    rel="noopener noreferrer">
-                                    Natural Language Toolkit
-                                </a>
-                                . By searching tags containing these stems, they are also grouped, according to the
-                                stems' membership in the emotions clusters, discarding the tags not containing any of
-                                the stems of the emotion-related words. Following, a manual selection of tags is
-                                performed, as not all tags containing stems of affective words describe an emotion
-                                perceived when listening to a particular song. Tags that could, at the same time, be
-                                mapped to a positive emotion and to a negative emotion are identified and removed. Some
-                                of these tags with ambiguous meaning found are <em>'to listen when sad', 'to listen when
-                                    happy', 'music for sad days', music for when you feel down'</em>.
-                            </p>
-                            <p class="section__text">
-                                After this curation phase, each song has its remained tags replaced by the emotion words
-                                describing the clusters the tags are part of. It is important to mention that the
-                                normalized values associated with each tag at song-level, are taking into account when
-                                mapping the tags to valence and arousal values. At this stage, after removing the songs
-                                without at least one tag with affective information, the dataset size is reduced to
-                                10,579 samples. Therefore, for each song, the tags are transformed into the words
-                                describing the emotions clusters, keeping their corresponding normalized count. In the
-                                case when more tags are mapped to the same word, the normalized count of the
-                                representative word is obtained by summing the values of the tags.
+                                In order to understand the relation between the features chosen to represent the audio signal and emotion, R<sup>2</sup> scores are computed for each of the two dimensions, displayed in the table below. It is visible that the MFCCs features have greater effect on the arousal dimension, when compared to the valence dimension. 
                             </p>
                             <div class="section__image-holder">
-                                <img src="images\tags_to_emotions_bg.png" width=100%>
+                                <img src="images\original_2d_rscore.png" width=25%>
                             </div>
-                            <p class="section__text">
-                                The
-                                <a class="section__cite dataset-text"
-                                    href="https://www.researchgate.net/publication/334118031_Obtaining_Reliable_Human_Ratings_of_Valence_Arousal_and_Dominance_for_20000_English_Words"
-                                    target="_blank" rel="noopener noreferrer">
-                                    NRC VAD Lexicon
-                                </a>
-                                comprises more than 20,000 English words with associated ratings of valence, arousal and
-                                dominance given by human annotators. The annotators were presented with groups of 4
-                                words from which, besides assigning real values of emotion dimensions, they had to
-                                choose two words following a Best-Worst Scaling technique. The final scores for each
-                                word were obtained by using the real values along with the proportions the respective
-                                word was ranked as best or worst and scaling them to range 0 .. 1.
-                            </p>
-                            <p class="section__text">
-                                Using this resource, the 27 words representing emotions are embedded into
-                                valence-arousal space, taking into account their summed count at song-level.
-                                For every song, the valence and arousal scores extracted from the VAD Lexicon for each
-                                word are multiplied by the normalized count and the final ratings for the song are
-                                obtained by computing the average of the sum of the weighted values for valence and
-                                arousal dimensions:
-                            </p>
-                            <div class="section__image-holder">
-                                <img src="https://render.githubusercontent.com/render/math?math=Valence(S) = \displaystyle{\frac{\sum_{w} valence_{w}\cdot count_{S,w}}{\sum_{w} count_{S,w}}}"
-                                    width=45%>
-                            </div>
-                            <div class="section__image-holder">
-                                <img src="https://render.githubusercontent.com/render/math?math=Arousal(S) = \displaystyle{\frac{\sum_{w} arousal_{w}\cdot count_{S,w}}{\sum_{w} count_{S,w}}}"
-                                    width=45%>
-                            </div>
-                            <p class="section__text">
-                                where <em>S</em> is a song in the dataset and <em>w</em> an emotion word in <em>S</em>.
-                            </p>
-                            <p class="section__text">
-                                This annotation strategy resulted in an unbalanced distribution of the data in the 2D
-                                space of emotions, with quadrant 2 appearing heavily underrepresented. This reveals that
-                                strong negative emotions such as <em>'anger', 'aggressivity'</em> are not frequently
-                                perceived in music.
-                            </p>
-                            <div class="section__image-holder">
-                                <img src="images\data_distribution.png" width=50%>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text"></p>
                             </div>
                         </div>
 
                         <div id="s5" class="section__anchor-space"></div>
                         <div class="section__holder">
                             <div class="section__title">
-                                Deezer Tracks Selection
+                                1D-output Configurations
                             </div>
                             <div class="section__separator dataset-bg"></div>
                             <p class="section__text">
-                                The next phase in creating a new dataset with valid information, is updating the Deezer
-                                IDs for the 10,579 annotated tracks. A number of 607 tracks are not found on Deezer
-                                platform and for 1,441 tracks with outdated IDs, replacements are found, with identical
-                                artist name and song title.
+                                Considering the different relations between the MFCCs features and the valence and arousal values, the next configuration consists in building two models to predict values in the two dimensions separately.
                             </p>
                             <p class="section__text">
-                                Another filtering process is performed considering the duration of songs and 32 more
-                                tracks are removed, bringing the dataset to a size of 9,972 samples.
+                                Starting with the same base scheme as previously mentioned, the two architectures differ in the number of parameters, as follows: the model that predicts valence uses 32 kernels for the first convolutional layer, 64 kernels for the second convolutional layer and 64 hidden units, while the model that predicts arousal has less parameters to be learned, with only 32 kernels for the second convolution. The only other difference in the 1D-output models architectures compared to the one of the 2D-output model is, as the names state, the mapping of the first linear layer to one output value instead of two.
                             </p>
+                            <div class="section__image-holder">
+                                <img src="images\original_cnn_valence.png" width=100%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text">
+                                    Architecture of the 1D-output model trained on the original dataset to predict valence.
+                                </p>
+                            </div>
+                            <br>
+                            <div class="section__image-holder">
+                                <img src="images\original_cnn_arousal.png" width=100%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text">
+                                    Architecture of the 1D-output model trained on the original dataset to predict arousal.
+                                </p>
+                            </div>
                         </div>
 
                         <div id="s6" class="section__anchor-space"></div>
                         <div class="section__holder">
                             <div class="section__title">
-                                Lyrics Cleaning
+                                Results
                             </div>
                             <div class="section__separator dataset-bg"></div>
                             <p class="section__text">
-                                The raw lyrics data contain a great amount of noise, as they are written by different
-                                users on <em>https://songmeanings.com/</em>, with no set of rules or format to be
-                                followed. Therefore, cleaning the lyrics data is a meticulous process that involves
-                                manual curating and a considerable amount of time. The lyrics have a particular
-                                structure, different than usual text data. Hence, before applying cleaning procedures
-                                commonly used in <em>NLP</em> tasks, this structure is studied for patterns
-                                identification
-                                with the scope of finding a set of rule that allow for automatization.
+                                The results of the experiments based on the original DEAM dataset are further presented side-by-side, in a comparative manner, for better emphasis of the differences in performance.
+                                When referring to the configuration consisting in one model that predicts both valence and arousal values, the names <b><em>2D-output model</em></b> and <b><em>2D-output CNN</em></b> are used interchangeably, while <b><em>1D-output models</em></b> and <b><em>1D-output CNNs</em></b> are used when referring to the configuration consisting in two models that predict valence and arousal separately.
                             </p>
                             <p class="section__text">
-                                In the raw lyrics text, there are different types of tags, such as repetitive
-                                instructions (<em>'repeat', 'x2', 'repeat once'</em>, etc.), announcement of artists
-                                singing a particular part of the song (<em>'[eminem]', '[all:]', '2pac'</em>, etc.),
-                                structural information (<em>'chorus', 'verse', 'bridge', 'pre-chorus'</em>, etc.).
-                                As a result of a series of manual transformations and removals, different types of
-                                patterns are revealed and used for automatization of the cleaning process.
-                                In differentiating between the types of patterns discovered, the <em>newline</em> (\n)
-                                character has the greatest role.
-                                The most important patterns are ones playing a role in changing the text of lyrics, as
-                                described below:
+                                The first method for evaluating the models consists in computing the regression metrics <b><em></em>MAE</em></b>, <b><em></em>MSE</em></b> and <b><em></em>R<sup>2</sup></em></b> score for each dimension.
                             </p>
                             <div class="section__image-holder">
-                                <img src="images\lyrics_repetition_patterns.png" width=90%>
+                                <img src="images\original_metrics.png" width=50%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text"></p>
                             </div>
                             <p class="section__text">
-                                The structural instructions are another class of patterns discovered, with no relevance
-                                for the strategy chosen in recognizing emotions in music, therefore are removed from the
-                                lyrics text. They may contain tags present in the important patterns mentioned earlier,
-                                but in different configurations, as defined by the occurrence of the <em>newline</em>
-                                character.
+                                The previously noted difference in the relations between the MFCCs features and the two emotion dimensions, given by the coefficient of correlation, remains valid in the case of the 1D-output configurations approach, with higher R<sup>2</sup> score for the arousal predictions and lower R<sup>2</sup> score for the valence predictions.
+                                Analysing the MAE and MSE errors values, there does not seem to be an improvement in the performance when training two models to predict separately on the two axes in the emotion space, compared to the first approach, of training a single model to predict values for both valence and arousal. It is possible, then, that the values in the two dimensions are not entirely independent.
+                            </p>
+                            <p class="section__text">
+                                For a better understanding of the results, the numeric scores are paired with visualizations of the predicted values compared to the observed values, with the results for each of the valence and arousal dimensions being presented in two types of plots.
+                            </p>
+                            <p class="section__text">
+                                In the cases of both the 2D-output model and the 1D-output models, it is visible that the values predicted cover a narrower range than the observed values.
                             </p>
                             <div class="section__image-holder">
-                                <img src="images\lyrics_structural_patterns.png" width=90%>
+                                <img src="images\original_cnn2_dimensions.png" width=90%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text">
+                                    2D-output model trained on the original dataset - Results for the valence dimension (<b><em>top</em></b>) and for the arousal dimension (<b><em>bottom</em></b>).
+                                </p>
+                            </div>
+                            <div class="section__image-holder">
+                                <img src="images\original_cnn1_dimensions.png" width=90%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text">
+                                    1D-output models trained on the original dataset - Results for the valence dimension (<b><em>top</em></b>) and for the arousal dimension (<b><em>bottom</em></b>).
+                                </p>
                             </div>
                             <p class="section__text">
-                                These transformations bring the lyrics text to a format that allows applying common
-                                preprocessing techniques used in NLP tasks.
+                                This difference between the ranges of predicted and observed values is emphasized in the table below. In the case of the 2D-output model, very low and very high observed values of valence are predicted to be higher and lower, respectively, while for the arousal dimension, the observed values in the lower half of the range are predicted more accurately, but high values are predicted to be lower. This aspect is slightly improved when training two 1D models, especially in the case of valence prediction.
                             </p>
+                            <div class="section__image-holder">
+                                <img src="images\original_ranges.png" width=70%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text">
+                                    Original dataset - Ranges of the observed and predicted values for 2D-output and 1D-output models.
+                                </p>
+                            </div>
+                            <p class="section__text">
+                                This may occur due to an imbalance in distribution of train data, this time in small intervals. For both dimensions —valence and arousal— the samples are spread similar to a Gaussian distribution, leaving the marginal intervals significantly underrepresented.
+                            </p>
+                            <div class="section__image-holder">
+                                <img src="images\deam_interval_distr.png" width=80%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text">
+                                    DEAM data distribution in intervals for valence and arousal dimensions.
+                                </p>
+                            </div>
+                            <p class="section__text">
+                                Another observation comes as a consequence of the distribution of the data in DEAM dataset in the 2D space of emotions, regarding the faulty predictions for the observed values falling in quadrants 2 and 4.
+                            </p>
+                            <div class="section__image-holder">
+                                <img src="images\original_quadrants.png" width=100%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text">
+                                    Original dataset - Result for valence and arousal in the space of emotions described by the four quadrants for the 2D-output model (<b><em>left</em></b>) and the 1D-output models (<b><em>right</em></b>).
+                                </p>
+                            </div>
+                            <p class="section__text">
+                                Looking at the predictions localization in the figure above, it becomes clear that training a group of two models to output separately in the valence and arousal dimensions leads to an improvement in the spread of the predicted values in both the space of emotions in general and the underrepresented quadrants in particular. Therefore, although still far from ideal, the increase in the predictions accuracy for the observed values in quadrants 2 and 4 is worth mentioning. While, in the case of the 2D-output CNN approach, the accuracy is recorded to be 2.04% for quadrant 2 and 11.36% for quadrant 4,  when predicting using the group of two 1D-output models it reaches 8.16% and 15.91%, respectively.
+                            </p>
+                            <p class="section__text"></p>
                         </div>
 
                         <div id="s7" class="section__anchor-space"></div>
                         <div class="section__holder">
                             <div class="section__title">
-                                Lyrics and Comments preprocessing
+                                Augmented Dataset
                             </div>
                             <div class="section__separator dataset-bg"></div>
                             <p class="section__text">
-                                Starting with the texts in <em>string</em> format, the following transformations are
-                                applied:
-                                <ul class="section__text">
-                                    <li>
-                                        replace words in short form with their extended forms <br>
-                                        - 'm &#8594 am <br>
-                                        - 're &#8594 are <br>
-                                        - 've &#8594 have <br>
-                                        - 'd &#8594 would <br>
-                                        - 'll &#8594 will <br>
-                                        - she's &#8594 she is <br>
-                                        - he's &#8594 he is <br>
-                                        - it's &#8594 it is <br>
-                                        - ain't &#8594 is not <br>
-                                        - n't &#8594 n not <br>
-                                        - n' &#8594 ng <br>
-                                        - 's &#8594 ''
-                                    </li>
-                                    <li>
-                                        remove punctuation symbols (<em>' . ' , ' , ' , ' ; ' , '!', '', '*'</em>, etc.)
-                                    </li>
-                                    <li>
-                                        remove spacing instructions (<em>'\n', '\t'</em>)
-                                    </li>
-                                </ul>
+                                With the purpose of creating a balanced distribution of the data from DEAM dataset in the four quadrants describing the space of emotions, the previously preprocessed data is used.
+                                The first step in augmenting the dataset, is duplicating samples in underrepresented quadrants and removing samples in overrepresented ones, until a fixed size of 500 samples in each quadrant is reached. After this, the audio samples are reduced to 80% of their length, by choosing a start time for the cropped excerpt in a random fashion, resulting in samples of 36sec length. 
+                            </p>
+                            <p class="section__text">                                
+                                Using the same parameters for the extraction of audio features as before, namely a window length of 30ms  with no overlapping and 20 Mel-filters, the MFCCs obtained from each raw sample have the size 20&times;1200. These are treated as 1D images with 20 channels, being fed to CNNs with 1D convolutions.
                             </p>
                             <p class="section__text">
-                                The steps presented above conclude with tokenization, converting the texts into lists of
-                                words. The preprocessing phase ends after curating the words resulted, as follows:
-                                <ul class="section__text">
-                                    <li>
-                                        correct identified misspellings (*'urself', 'thered'*, etc.)
-                                    </li>
-                                    <li>
-                                        replace censored words with their uncensored version
-                                    </li>
-                                    <li>
-                                        remove stopwords
-                                    </li>
-                                    <li>
-                                        discard non-english words, using
-                                        <a class="section__cite dataset-text"
-                                            href="http://pyenchant.github.io/pyenchant/" target="_blank"
-                                            rel="noopener noreferrer">
-                                            pyenchant
-                                        </a>
-                                    </li>
-                                    <li>
-                                        keep the non-english words that appear in the slangs lexicon
-                                        <a class="section__cite dataset-text" href="https://arxiv.org/abs/1608.05129"
-                                            target="_blank" rel="noopener noreferrer">
-                                            [Wu et al., 2016]
-                                        </a>
-                                    </li>
-                                </ul>
+                                Before training, the augmented dataset resulted is divided in train(1600 samples) and test(400 samples) sets, having an equal number of samples in each quadrant and the MFCCs features in each set are normalized considering the mean and variance computed on the train set. The training and testing are performed in batches of 64 samples, shuffled every epoch.
                             </p>
                         </div>
 
+                        <div id="s8" class="section__anchor-space"></div>
+                        <div class="section__holder">
+                            <div class="section__title">
+                                2D-output Configuration
+                            </div>
+                            <div class="section__separator dataset-bg"></div>
+                            <p class="section__text">
+                                This method is based on the same configuration used when working with the original dataset, allowing for comparison between the two. Therefore, the architecture of the 2D-output model trained on the augmented dataset consists in two convolutional blocks, the difference lying in the dimensions of the feature maps. This sequence is followed by an Average Pooling layer, two linear operations, with a layer with 50% dropout probability of the data preceding the second one.
+                            </p>
+                            <div class="section__image-holder">
+                                <img src="images\augmented_cnn_2d.png" width=100%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text">
+                                    Architecture of the 2D-output model trained on the augmented dataset.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div id="s9" class="section__anchor-space"></div>
+                        <div class="section__holder">
+                            <div class="section__title">
+                                1D-output Configurations
+                            </div>
+                            <div class="section__separator dataset-bg"></div>
+                            <p class="section__text">
+                                Approaching the task by training a group of two models on the augmented dataset, the same architectures designed for working with the original dataset are used.
+                                Keeping the same number of learnable parameters, the configurations differ in the dimensions of the feature maps, according to the smaller size of the input features. Hence, the model trained to predict valence has more parameters than the model trained to predict arousal.
+                            </p>
+                            <div class="section__image-holder">
+                                <img src="images\augmented_cnn_valence.png" width=100%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text">
+                                    Architecture of the 1D-output model trained on the augmented dataset to predict valence.
+                                </p>
+                            </div>
+                            <br>
+                            <div class="section__image-holder">
+                                <img src="images\augmented_cnn_arousal.png" width=100%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text">
+                                    Architecture of the 1D-output model trained on the augmented dataset to predict arousal.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div id="s10" class="section__anchor-space"></div>
+                        <div class="section__holder">
+                            <div class="section__title">
+                                Results
+                            </div>
+                            <div class="section__separator dataset-bg"></div>
+                            <p class="section__text">
+                                As before, the results for the experiments based on the augmented DEAM dataset are presented comparatively and the same naming conventions are used: <b><em>2D-output model</em></b> and <b><em>2D-output CNN</em></b> are used interchangeably when referring to the configuration consisting in one model that predicts both valence and arousal values, while <b><em>1D-output models</em></b> and <b><em>1D-output CNNs</em></b> are used when referring to the configuration consisting in two models that predict valence and arousal separately.
+                            </p>
+                            <p class="section__text">
+                                Computing the first set of performance metrics, the <b><em>R<sup>2</sup></em></b> highlight again the milder influence the MFCCs features have on the valence dimensions, when compared to their stronger influence on the arousal dimension. 
+                                The <b><em>MAE</em></b> and <b><em>MSE</em></b> errors values show a significant improvement in the values predicted using the two 1D-output models, in contrast with the 2D-output model.
+                            </p>
+                            <div class="section__image-holder">
+                                <img src="images\augmented_metrics.png" width=50%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text"></p>
+                            </div>
+                            <p class="section__text">
+                                Analysing the visualizations of the observed and predicted values in the valence and arousal dimensions for the 2D-output model and the 1D-output models, the superiority of the latter is once again visible, considering the goodness of fit.
+                            </p>
+                            <div class="section__image-holder">
+                                <img src="images\augmented_cnn2_dimensions.png" width=90%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text">
+                                    2D-output model trained on the augmented dataset - Results for the valence dimension (<b><em>top</em></b>) and for the arousal dimension (<b><em>bottom</em></b>).
+                                </p>
+                            </div>
+                            <div class="section__image-holder">
+                                <img src="images\augmented_cnn1_dimensions.png" width=90%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text">
+                                    1D-output models trained on the augmented dataset - Results for the valence dimension (<b><em>top</em></b>) and for the arousal dimension (<b><em>bottom</em></b>).
+                                </p>
+                            </div>
+                            <p class="section__text">
+                                Pairing these plots with the ranges the predicted values fall in, it is noticeable that the predictions made using the 1D-output CNNs cover a wider range of values that is getting closer to the one defined by the observed values than the predictions made by the 2D-output model.
+                            </p>
+                            <div class="section__image-holder">
+                                <img src="images\augmented_ranges.png" width=70%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text">
+                                    Augmented dataset - Ranges of the observed and predicted values for 2D-output and 1D-output models.
+                                </p>
+                            </div>
+                            <p class="section__text">
+                                This spread also shows in the visualization of the predictions in the four quadrants defining the space of emotions, especially in the case of the underrepresented quadrants. While predicting using the 2D-output model leads to accuracy of 22.92% and 32.63% for quadrant 2 and quadrant 4, respectively, the predictions made by the two 1D-output models raises the accuracy to 48.96%  and 47.37%, respectively.
+                            </p>
+                            <div class="section__image-holder">
+                                <img src="images\augmented_quadrants.png" width=100%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text">
+                                    Augmented datast - Result for valence and arousal in the space of emotions described by the four quadrants for the 2D-output model (<b><em>left</em></b>) and the 1D-output models (<b><em>right</em></b>).
+                                </p>
+                            </div>
+                        </div>
+
+                        <div id="s11" class="section__anchor-space"></div>
+                        <div class="section__holder">
+                            <div class="section__title">
+                                Comparative Analysis
+                            </div>
+                            <div class="section__separator dataset-bg"></div>
+                            <p class="section__text">
+                                In order to understand better of the effect the imbalance in data distribution has when training a neural network, this section presents a comparison between the configurations that led to the best results for each approach to working with the DEAM dataset —original and augmented.
+                                As observed above, in both cases —working with the original dataset and augmenting the dataset before training— the configurations composed of two 1D-output models, each predicting in one of the dimensions defining the emotion space, performed better.
+                            </p>
+                            <p class="section__text">
+                                For a facile distinction between the two configurations, the models trained on the original dataset are referred by <b><em>CNNs 1.o.</em></b> and the models trained on the augmented dataset are announced by <b><em>CNNs 1.a.</em></b>.
+                            </p>
+                            <p class="section__text">
+                                The first analysis method consists in computing the accuracy of predictions made using each configuration in the four quadrants. This represents a numerical translation of the plots displaying the predictions in the emotion space. It can easily be observed that, while the models trained on the augmented dataset led to significant improvement in predictions in the underrepresented quadrants 2 and 4, the accuracy of the predictions in quadrants 1 and 3 is higher in case of the models trained on the original dataset. Nevertheless, the trade-off of a loss in the accuracy of the overrepresented quadrants is preferred, as it leads to overall balanced and qualitative results.
+                            </p>
+                            <div class="section__image-holder">
+                                <img src="images\comparative_acc.png" width=70%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text"></p>
+                            </div>
+                            <p class="section__text">
+                                Evaluating the models' performance by computing the regression metrics <b><em>MAE</em></b>, <b><em>MSE</em></b> and <b><em>R<sup>2</sup></em></b> reveals again the positive influence augmenting the dataset prior to training has on the learning process.
+                                Starting with the coefficients of correlation values, they show a stronger relation between the MFCCs features and both dimensions of emotions in the case of working with the augmented dataset.
+                                Significant differences are also noted in the errors values, the predictions made by the CNNs1.a. models being closer to the expected values, therefore recording smaller errors.
+                            </p>
+                            <div class="section__image-holder">
+                                <img src="images\comparative_metrics.png" width=50%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text">
+                                    Comparison of the performance metrics  between the configurations of two 1D-output models trained on the original dataset and the augmented dataset.
+                                </p>
+                            </div>
+                            <p class="section__text">
+                                It was proved that the imbalance in data distribution has a negative impact on the regression performance, as expected. For a comprehensive understanding of the learning process, it it necessary to evaluate the regression using different tools, from different perspectives. The two dimensions of the emotion —valence and arousal— are influenced differently by a set of audio features. This is addressed by dividing the problem in two tasks and building separate models to predict in each dimension.
+                            </p>
+                        </div>
 
 
 

@@ -18,7 +18,7 @@
         padding-top: 0rem;
         padding-bottom: 2rem;
         
-        @include breakpoint-up(medium) {
+        @include breakpoint-up(small) {
             flex: 1;
             flex-basis: 30%;
             text-align: right;
@@ -29,8 +29,8 @@
     }
 
     .content-item{
-        width: 100%;
         max-width: 42rem;
+        width: 100%;
         padding-top: 3rem;
         
         @include breakpoint-up(medium) {
@@ -94,6 +94,11 @@
     &__content{
         text-align: left;
 
+        .list-space{
+            margin-top: -2rem;
+            padding-bottom: 0;
+        }
+
         .section{
 
             &__anchor-space{
@@ -147,8 +152,21 @@
 
             &__image-holder{
                 text-align: center;
-                // padding-top: .15rem;
-                padding-bottom: 1.5rem;
+                margin-top: -.75rem;
+            }
+
+            &__fig-caption{
+                margin-top: -.5rem;
+                text-align: center;
+
+                &__text{
+                    font-size: .725rem;
+                    color: $black;
+        
+                    @include breakpoint-up(medium) {
+                        font-size: .825rem;
+                    }
+                }
             }
         }
     }

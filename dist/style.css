@@ -660,6 +660,10 @@ button, .button {
   }
 }
 
+.read__intro .intro-item__to-code > a:hover {
+  color: #585856;
+}
+
 .read__sep-holder {
   padding: .15rem 0 .15rem 0;
 }
@@ -711,6 +715,32 @@ button, .button {
   }
 }
 
+.read__content .section__stitle {
+  width: 75%;
+  font-size: .95rem;
+  font-weight: 400;
+  color: #585856;
+}
+
+@media (min-width: 48em) {
+  .read__content .section__stitle {
+    font-size: 1.075rem;
+  }
+}
+
+.read__content .section__sstitle {
+  width: 75%;
+  font-size: .925rem;
+  font-weight: 400;
+  color: #585856;
+}
+
+@media (min-width: 48em) {
+  .read__content .section__sstitle {
+    font-size: 1.025rem;
+  }
+}
+
 .read__content .section__separator {
   width: 75%;
   height: 1px;
@@ -730,14 +760,14 @@ button, .button {
 }
 
 .read__content .section__cite {
-  font-size: .90625rem;
+  font-size: .875rem;
   line-height: 1.5;
   text-decoration: none;
 }
 
 @media (min-width: 48em) {
   .read__content .section__cite {
-    font-size: 1rem;
+    font-size: .9rem;
   }
 }
 
@@ -924,7 +954,7 @@ code {
 
 @media (min-width: 48em) {
   .toc__btn {
-    font-size: .825rem;
+    font-size: .835rem;
   }
 }
 
@@ -940,7 +970,7 @@ code {
 
 .toc__btn-sub {
   text-align: right;
-  font-size: .875rem;
+  font-size: .845rem;
   padding: 0 0;
   padding-right: .35rem;
   color: #585856;
@@ -949,7 +979,7 @@ code {
 
 @media (min-width: 48em) {
   .toc__btn-sub {
-    font-size: .825rem;
+    font-size: .815rem;
   }
 }
 
@@ -965,7 +995,7 @@ code {
 
 .toc__btn-ssub {
   text-align: right;
-  font-size: .875rem;
+  font-size: .815rem;
   padding: 0 0;
   padding-right: .35rem;
   color: #585856;
@@ -974,7 +1004,7 @@ code {
 
 @media (min-width: 48em) {
   .toc__btn-ssub {
-    font-size: .825rem;
+    font-size: .775rem;
   }
 }
 
@@ -1034,7 +1064,7 @@ code {
 
 .toc-mobile__btn-sub {
   text-align: left;
-  font-size: .875rem;
+  font-size: .845rem;
   padding: 0 0;
   padding-left: .35rem;
   color: #585856;
@@ -1053,7 +1083,7 @@ code {
 
 .toc-mobile__btn-ssub {
   text-align: left;
-  font-size: .875rem;
+  font-size: .815rem;
   padding: 0 0;
   padding-left: .35rem;
   color: #585856;

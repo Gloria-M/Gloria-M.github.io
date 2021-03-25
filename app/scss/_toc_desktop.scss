@@ -90,7 +90,7 @@
         border-right: 2px solid $darkT60;
     
         @include breakpoint-up(medium) {
-            font-size: .825rem;
+            font-size: .835rem;
         }
 
         &__dataset{
@@ -112,14 +112,14 @@
 
     &__btn-sub{
         text-align: right;
-        font-size: .875rem;
+        font-size: .845rem;
         padding: 0 0;
         padding-right: .35rem;;
         color: $dark;
         border-right: 6px solid $darkT40;
     
         @include breakpoint-up(medium) {
-            font-size: .825rem;
+            font-size: .815rem;
         }
 
         &__dataset{
@@ -141,14 +141,14 @@
 
     &__btn-ssub{
         text-align: right;
-        font-size: .875rem;
+        font-size: .815rem;
         padding: 0 0;
         padding-right: .35rem;;
         color: $dark;
         border-right: 10px solid $darkT40;
     
         @include breakpoint-up(medium) {
-            font-size: .825rem;
+            font-size: .775rem;
         }
 
         &__dataset{

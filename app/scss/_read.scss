@@ -76,6 +76,10 @@
                     font-size: .875rem;
                     padding-bottom: 0;
                 }
+
+                >a:hover{
+                    color: $dark;
+                }
             }
         }
         
@@ -127,6 +131,28 @@
                 }
             }
 
+            &__stitle{
+                width: 75%;
+                font-size: .95rem;
+                font-weight: 400;
+                color: $dark;
+    
+                @include breakpoint-up(medium) {
+                    font-size: 1.075rem;
+                }
+            }
+
+            &__sstitle{
+                width: 75%;
+                font-size: .925rem;
+                font-weight: 400;
+                color: $dark;
+    
+                @include breakpoint-up(medium) {
+                    font-size: 1.025rem;
+                }
+            }
+
             &__separator{
                 width: 75%;
                 height: 1px;
@@ -144,12 +170,12 @@
             }
 
             &__cite{
-                font-size: .90625rem;
+                font-size: .875rem;
                 line-height: 1.5;
                 text-decoration: none;
     
                 @include breakpoint-up(medium) {
-                    font-size: 1rem;
+                    font-size: .9rem;
                 }
             }
 

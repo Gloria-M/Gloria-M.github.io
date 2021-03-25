@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/icon.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/dist/style.css">
+    <title>Analysis of multimodal Music Emotion Recognition</title>
+
+</head>
+
+<body>
+
+    <div class="nav-back"></div>
+    <header class="header">
+        <div class="overlay has-fade"></div>
+        <nav class="container container--pall flex flex-jc-sb flex-ai-c">
+            <a href="/" class="header__logo">
+                <img src="images/logo.svg" alt="Easybank">
+            </a>
+
+            <a id="btnHamburger" href="#" class="header__toggle hide-for-medium">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+
+            <div class="header__links hide-for-xsmall">
+                <a href="/">Projects</a>
+                <a href="https://linkedin.com/in/gloria-ruxandra-maciuca-a60043135" target="_blank" rel="noopener noreferrer"><img src="/images/logo_linkedin.svg"></a>
+                <a href="https://github.com/Gloria-M" target="_blank" rel="noopener noreferrer"><img
+                        src="/images/logo_github.svg"></a>
+            </div>
+        </nav>
+
+        <div class="header__menu has-fade">
+            <a href="/">Projects</a>
+            <a href="https://linkedin.com/in/gloria-ruxandra-maciuca-a60043135" target="_blank" rel="noopener noreferrer"><img src="/images/logo_linkedin.svg"></a>
+            <a href="https://github.com/Gloria-M" target="_blank" rel="noopener noreferrer"><img
+                    src="/images/logo_github.svg"></a>
+        </div>
+
+    </header>
+
+    <div class="read">
+        <div class="container container--pall">
+
+            <div class="read__grid">
+
+                <div class="toc-item hide-for-mobile">
+                    <div class="toc__holder">
+                        <ul class="toc__list-long toc__list-long__multimodal">
+                            <li class="toc__multimodal">
+                                <a href="#intro">
+                                    <div class="toc__btn toc__btn__multimodal">
+                                        Introduction
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="toc__multimodal">
+                                <a href="#s1">
+                                    <div class="toc__btn toc__btn__multimodal">
+                                        Data Augmentation
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="toc__multimodal">
+                                <a href="#s2">
+                                    <div class="toc__btn toc__btn__multimodal">
+                                        Feature Extraction
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="toc__multimodal">
+                                <a href="#s3">
+                                    <div class="toc__btn toc__btn__multimodal">
+                                        Methods
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="toc__multimodal">
+                                <a href="#s4">
+                                    <div class="toc__btn-sub toc__btn-sub__multimodal">
+                                        Unimodal Approach
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="toc__multimodal">
+                                <a href="#s5">
+                                    <div class="toc__btn-ssub toc__btn-ssub__multimodal">
+                                        Audio Modality
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="toc__multimodal">
+                                <a href="#s6">
+                                    <div class="toc__btn-ssub toc__btn-ssub__multimodal">
+                                        Text Modalities
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="toc__multimodal">
+                                <a href="#s7">
+                                    <div class="toc__btn-ssub toc__btn-ssub__multimodal">
+                                        Results
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="toc__multimodal">
+                                <a href="#s8">
+                                    <div class="toc__btn-sub toc__btn-sub__multimodal">
+                                        Multimodal Approach
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="toc__multimodal">
+                                <a href="#s9">
+                                    <div class="toc__btn-ssub toc__btn-ssub__multimodal">
+                                        Results
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="toc__multimodal">
+                                <a href="#s10">
+                                    <div class="toc__btn toc__btn__multimodal">
+                                        Comparative Analysis
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="toc__multimodal">
+                                <a href="#s11">
+                                    <div class="toc__btn toc__btn__multimodal">
+                                        Conclusion
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="content-item">
+                    <div class="read__intro">
+                        <div class="intro-item">
+                            <div class="intro-item__title">
+                                Analysis of multimodal Music Emotion Recognition
+                            </div>
+
+                            <div class="read__sep-holder hide-for-desktop">
+                                <div class="read__separator multimodal-bg"></div>
+                            </div>
+
+                            <div class="intro-item__to-code multimodal-text">
+                                [
+                                <a class="multimodal-text" href="https://github.com/Gloria-M/multimodal-MER-simple"
+                                    target="_blank" rel="noopener noreferrer">Go to code &nbsp;I</a>
+                                ]<br>
+                                [
+                                <a class="multimodal-text" href="https://github.com/Gloria-M/multimodal-MER-fusion"
+                                    target="_blank" rel="noopener noreferrer">Go to code II</a>
+                                ]
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="read__sep-holder hide-for-mobile">
+                        <div class="read__separator multimodal-bg"></div>
+                    </div>
+
+
+                    <div class="read__content">
+
+                        <div id="intro" class="section__anchor-space"></div>
+                        <div class="section__holder">
+                            <p class="section__text">
+                                From the desire to model as accurate as possible the timeline described by humans when
+                                listening to music, emerged the necessity of creating a new multimodal, to provide support
+                                for
+                                recognizing emotions not only from audio features, but also from lyrics and comments
+                                features.
+                                The annotations are represented by scores in the two dimensions of emotion —valence and
+                                arousal— and lists of emotion-related word & count tuples.
+                            </p>
+                        </div>
+
+                        <div class="toc-item hide-for-desktop">
+                            <div class="toc-mobile__holder">
+                                <ul class="toc-mobile__list">
+                                    <li class="toc-mobile__multimodal">
+                                    </li>
+                                    <li class="toc-mobile__multimodal">
+                                        <a href="#s1">
+                                            <div class="toc-mobile__btn toc-mobile__btn__multimodal">
+                                                Data Augmentation
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="toc-mobile__multimodal">
+                                        <a href="#s2">
+                                            <div class="toc-mobile__btn toc-mobile__btn__multimodal">
+                                                Feature Extraction
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="toc-mobile__multimodal">
+                                        <a href="#s3">
+                                            <div class="toc-mobile__btn toc-mobile__btn__multimodal">
+                                                Methods
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="toc-mobile__multimodal">
+                                        <a href="#s4">
+                                            <div class="toc-mobile__btn-sub toc-mobile__btn-sub__multimodal">
+                                                Unimodal Approach
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="toc-mobile__multimodal">
+                                        <a href="#s5">
+                                            <div class="toc-mobile__btn-ssub toc-mobile__btn-ssub__multimodal">
+                                                Audio Modality
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="toc-mobile__multimodal">
+                                        <a href="#s6">
+                                            <div class="toc-mobile__btn-ssub toc-mobile__btn-ssub__multimodal">
+                                                Text Modalities
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="toc-mobile__multimodal">
+                                        <a href="#s7">
+                                            <div class="toc-mobile__btn-ssub toc-mobile__btn-ssub__multimodal">
+                                                Results
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="toc-mobile__multimodal">
+                                        <a href="#s8">
+                                            <div class="toc-mobile__btn-sub toc-mobile__btn-sub__multimodal">
+                                                Multimodal Approach
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="toc-mobile__multimodal">
+                                        <a href="#s9">
+                                            <div class="toc-mobile__btn-ssub toc-mobile__btn-ssub__multimodal">
+                                                Results
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="toc-mobile__multimodal">
+                                        <a href="#s10">
+                                            <div class="toc-mobile__btn toc-mobile__btn__multimodal">
+                                                Comparative Analysis
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="toc-mobile__multimodal">
+                                        <a href="#s11">
+                                            <div class="toc-mobile__btn toc-mobile__btn__multimodal">
+                                                Conclusion
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div id="s1" class="section__anchor-space"></div>
+                        <div class="section__holder">
+                            <div class="section__title">
+                                Data Augmentation
+                            </div>
+                            <div class="section__separator multimodal-bg"></div>
+                            <p class="section__text">
+                                As noted in  [<a  class="section__cite multimodal-text" href="unimodal.html#s11" target="_blank"
+                                rel="noopener noreferrer">Unimodal MER</a>], the imbalance in the dataset affects negatively the performace of neural networks. This leads to the need of augmenting the new dataset.
+                                As observed in 
+                                [<a  class="section__cite multimodal-text" href="new_dataset.html#distr-data" target="_blank"
+                                rel="noopener noreferrer">New Dataset</a>], the second quadrant is considerably underrepresented. To correct this unequal distribution of data in the space of emotions, the first step in this direction consists in duplicating samples in the underrepresented quadrants and removing samples chosen randomly in the overrepresented ones, until the fixed size of 3000 samples in each quadrant is reached. Then, the data representing each modality is treated accordingly to their particularities.
+                            </p>
+                        </div>
+
+                        <div class="section__anchor-space"></div>
+                        <div class="section__holder">
+                            <div class="section__sstitle">
+                                Audio Augmentation
+                            </div>
+                            <p class="section__text">
+                                The audio samples are reduced to an excerpt, by sampling the the beginning of the cropped segment from an uniform distribution, with the scope of gathering audio properties from different parts in song. The length of the excerpts is set to 73sec, aiming to capture as much of the initial signal as possible. This length is further reduced to 45sec, by keeping the first 3sec from consecutive non-overlapping 5sec segments. Although not ideal, this approach is motivated by the desire to obtain comprehensive information from a song, considering the limited computational resources.
+                            </p>
+                            <!-- <p class="section__text">
+                                The MFCCs features are extracted from the audio signal sampled at 44,100Hz/sec and
+                                divided in windows of 30ms duration without overlapping, using LibROSA, an open-source
+                                Python package for music and audio analysis.
+                            </p>
+                            <p class="section__text">
+                                Before using the resulting MFCCs features for training a neural network, a normalization
+                                operation must be performed. One of the most used techniques is <em><b>Cepstral Mean and
+                                        Variance Normalization</b></em>, a simple computation of subtracting the mean
+                                and dividing this result by the standard deviation.
+                            </p> -->
+                        </div>
+
+                        <!-- <div id="s2" class="section__anchor-space"></div>
+                        <div class="section__holder">
+                            <div class="section__title">
+                                Feature Extraction
+                            </div>
+                            <div class="section__separator multimodal-bg"></div>
+                            <p class="section__text">
+                                The multimodal used in this chapter is The MediaEval Database for Emotional Analysis of
+                                Music
+                                <a class="section__cite multimodal-text"
+                                    href="https://www.researchgate.net/publication/314656874_Developing_a_benchmark_for_emotional_analysis_of_music"
+                                    target="_blank" rel="noopener noreferrer">
+                                    [DEAM]
+                                </a>, consisting in 1,744 song excerpts of ~45sec duration, with two types of
+                                annotations for valence and arousal available: dynamic —measured per second— and static
+                                —measured per 45sec. The static
+                                annotations, which are used in this study, are scaled down from range 1 .. 9 to range 0
+                                .. 1.
+                                A visualization of data distribution in the 2D space of emotions shows an obvious
+                                imbalance in the four quadrants:
+                            </p>
+                            <div class="section__image-holder">
+                                <img src="images\deam_distribution2.png" width=100%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text">
+                                   Distribution of DEAM data in the four quadrants.
+                                </p>
+                            </div>
+                        </div> -->
+
+
+
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="/app/js/script.js"></script>
+</body>
+
+</html>

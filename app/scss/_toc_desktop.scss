@@ -8,8 +8,9 @@
 
     &__list {
         position: fixed;
-        max-width: 25%;
-        top: 10rem;
+        max-height: calc(100vh - 70px);
+        top: 70px;
+        bottom: 0;
         list-style-type: none;
 
         >li {
@@ -20,9 +21,59 @@
 
     &__list-long {
         position: fixed;
-        max-width: 25%;
-        top: 8rem;
+        max-height: calc(100vh - 70px);
+        max-width: calc(100vw - 73%);
+        top: 70px;
+        bottom: 0;
         list-style-type: none;
+        
+        @include breakpoint-down-height(large-height){
+            overflow-y: scroll;
+            padding-right: .25rem;
+        }
+
+        &__dataset {
+            @include custom-scroll-bar($datasetColorT60);
+        }
+
+        &__multimodal {
+            @include custom-scroll-bar($multimodalColorT60);
+        }
+
+        &__sr {
+            @include custom-scroll-bar($srColorT60);
+        }
+
+        >li {
+            margin-top: .75rem;
+            margin-bottom: .75rem;
+        }
+    }
+
+    &__list-medium {
+        position: fixed;
+        max-height: calc(100vh - 70px);
+        max-width: calc(100vw - 73%);
+        top: 70px;
+        bottom: 0;
+        list-style-type: none;
+        
+        @include breakpoint-down-height(medium-height){
+            overflow-y: scroll;
+            padding-right: .25rem;
+        }
+
+        &__dataset {
+            @include custom-scroll-bar($datasetColorT60);
+        }
+
+        &__multimodal {
+            @include custom-scroll-bar($multimodalColorT60);
+        }
+
+        &__sr {
+            @include custom-scroll-bar($srColorT60);
+        }
 
         >li {
             margin-top: .75rem;
@@ -37,6 +88,10 @@
         padding-right: .35rem;;
         color: $dark;
         border-right: 2px solid $darkT60;
+    
+        @include breakpoint-up(medium) {
+            font-size: .825rem;
+        }
 
         &__dataset{
 
@@ -62,6 +117,10 @@
         padding-right: .35rem;;
         color: $dark;
         border-right: 6px solid $darkT40;
+    
+        @include breakpoint-up(medium) {
+            font-size: .825rem;
+        }
 
         &__dataset{
 
@@ -87,6 +146,10 @@
         padding-right: .35rem;;
         color: $dark;
         border-right: 10px solid $darkT40;
+    
+        @include breakpoint-up(medium) {
+            font-size: .825rem;
+        }
 
         &__dataset{
 

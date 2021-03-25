@@ -65,12 +65,12 @@
         margin-bottom: 1.25rem;
 
         @include breakpoint-up(medium) {
-            font-size: 1.25rem;
             text-align: right;
             margin-bottom: 1.5rem;
         }
 
         @include breakpoint-up(large) {
+            font-size: 1.25rem;
             margin-bottom: 1.5rem;
         }
     }
@@ -82,8 +82,9 @@
         overflow: hidden;
         max-height: 3.75rem;
 
-        @include breakpoint-up(medium) {
-            max-height: 5.25rem;
+        @include breakpoint-up(large) {
+            font-size: 1rem;
+            max-height: 5.95rem;
         }
     }
 

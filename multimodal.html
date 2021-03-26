@@ -177,16 +177,17 @@
                         <div id="intro" class="section__anchor-space"></div>
                         <div class="section__holder">
                             <p class="section__text">
-                                From the desire to model as accurate as possible the timeline described by humans when
-                                listening to music, emerged the necessity of creating a new multimodal, to provide support
-                                for
-                                recognizing emotions not only from audio features, but also from lyrics and comments
-                                features.
-                                The annotations are represented by scores in the two dimensions of emotion —valence and
-                                arousal— and lists of emotion-related word & count tuples.
+                                Inspired by the <a  class="section__cite multimodal-text" href="new_dataset.html#timeline" target="_blank"
+                                rel="noopener noreferrer">timeline</a> described by people in the context of a musical experience and based on the <a  class="section__cite multimodal-text" href="new_dataset.html" target="_blank"
+                                rel="noopener noreferrer">New multimodal Dataset</a> created, this project describes different approaches to MER. Starting with individually treating the musical dimensions, emotions are predicted solely from audio, lyrics or comments features. Following, using combinations of this modalities, specifically audio - lyrics and audio - comments, fusions of models are designed to recognize emotions.
+                            </p>
+                            <p class="section__text">
+                                The experiments lead to a discussion on the role including different musical dimensions has on learning to recognize emotions from music, by analysing jointly the unimodal and multimodal approach results. 
+                            </p>
+                            <p class="section__text">
+                                This concludes with an investigation of the tools and methods used, from the quality of the annotations, to the features chosen to represent the text modalities.
                             </p>
                         </div>
-
                         <div class="toc-item hide-for-desktop">
                             <div class="toc-mobile__holder">
                                 <ul class="toc-mobile__list">
@@ -296,49 +297,254 @@
                             <p class="section__text">
                                 The audio samples are reduced to an excerpt, by sampling the the beginning of the cropped segment from an uniform distribution, with the scope of gathering audio properties from different parts in song. The length of the excerpts is set to 73sec, aiming to capture as much of the initial signal as possible. This length is further reduced to 45sec, by keeping the first 3sec from consecutive non-overlapping 5sec segments. Although not ideal, this approach is motivated by the desire to obtain comprehensive information from a song, considering the limited computational resources.
                             </p>
-                            <!-- <p class="section__text">
-                                The MFCCs features are extracted from the audio signal sampled at 44,100Hz/sec and
-                                divided in windows of 30ms duration without overlapping, using LibROSA, an open-source
-                                Python package for music and audio analysis.
-                            </p>
-                            <p class="section__text">
-                                Before using the resulting MFCCs features for training a neural network, a normalization
-                                operation must be performed. One of the most used techniques is <em><b>Cepstral Mean and
-                                        Variance Normalization</b></em>, a simple computation of subtracting the mean
-                                and dividing this result by the standard deviation.
-                            </p> -->
+                            <div class="section__image-holder">
+                                <img src="images\audio_augmentation.png" width=95%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text">
+                                   Audio data augmentation technique.
+                                </p>
+                            </div>
                         </div>
 
-                        <!-- <div id="s2" class="section__anchor-space"></div>
+                        <div class="section__anchor-space"></div>
+                        <div class="section__holder">
+                            <div class="section__sstitle">
+                                Lyrics and Comments Augmentation
+                            </div>
+                            <p class="section__text">
+                                Having similar format, the augmentation of lyrics and comments data is presented jointly.
+                                The method chosen to obtain augmented representations for the same sample, is by replacing 20% of the words, in case of duplicates, with their synonyms, using synsets provided in WordNet.
+                            </p>
+                        </div>
+
+                        <div id="s2" class="section__anchor-space"></div>
                         <div class="section__holder">
                             <div class="section__title">
                                 Feature Extraction
                             </div>
                             <div class="section__separator multimodal-bg"></div>
+                        </div>
+
+                        <div class="section__anchor-space"></div>
+                        <div class="section__holder">
+                            <div class="section__sstitle">
+                                Audio Features
+                            </div>
                             <p class="section__text">
-                                The multimodal used in this chapter is The MediaEval Database for Emotional Analysis of
-                                Music
-                                <a class="section__cite multimodal-text"
-                                    href="https://www.researchgate.net/publication/314656874_Developing_a_benchmark_for_emotional_analysis_of_music"
-                                    target="_blank" rel="noopener noreferrer">
-                                    [DEAM]
-                                </a>, consisting in 1,744 song excerpts of ~45sec duration, with two types of
-                                annotations for valence and arousal available: dynamic —measured per second— and static
-                                —measured per 45sec. The static
-                                annotations, which are used in this study, are scaled down from range 1 .. 9 to range 0
-                                .. 1.
-                                A visualization of data distribution in the 2D space of emotions shows an obvious
-                                imbalance in the four quadrants:
+                                To represent the audio signal, the MFCCs features are extracted from the audio sample divided in windows of 30ms duration. Therefore, from each 45sec audio excerpt sampled at 22,050Hz/sec, are obtained MFCCs features with the size 20&times;1502.
+                                Before feeding the features set to the neural network, these are normalized using the Cepstral Mean and Variance normalization technique, resulting in data centered with zero mean and unit variance.
+                            </p>
+                        </div>
+
+                        <div class="section__anchor-space"></div>
+                        <div class="section__holder">
+                            <div class="section__sstitle">
+                                Lyrics and Comments Features
+                            </div>
+                            <p class="section__text">
+                                One more pre-processing step needs to be done before extracting features from lyrics and comments, specifically <b><em>stemming</em></b> the words to their root, achieved by using the same Porter stemming algorithm.
+                            </p>
+                            <p class="section__text">
+                                The representations chosen for the text features are <b><em>Word2Vec embeddings</em></b>
+                                [<a  class="section__cite multimodal-text" href="https://arxiv.org/abs/1301.3781" target="_blank"
+                                rel="noopener noreferrer">Mikolov et al., 2013</a>]
+                                After several trials, the number of features chosen to represent the words in the context space is set to 300 and the sequence length of each sample is fixed to 500 words.
+                            </p>
+                        </div>
+
+                        <div id="s3" class="section__anchor-space"></div>
+                        <div class="section__holder">
+                            <div class="section__title">
+                                Methods
+                            </div>
+                            <div class="section__separator multimodal-bg"></div>
+                            <p class="section__text">
+                                The experiments presented further are designed considering the music emotion recognition task as a regression problem, therefore, the predictions are real values for the valence and arousal dimensions of the emotions space.
+                            </p>
+                            <p class="section__text">
+                                The conclusions drawn from the <a  class="section__cite multimodal-text" href="unimodal.html#s11" target="_blank"
+                                rel="noopener noreferrer">DEAM experiments</a> represent the foundation the next approaches are based on, but they are conditioned by the computational power available. 
+                                Hence, also influenced by the large dataset size, instead of building groups of two models, each predicting values in only one emotional dimension, there will be used models with 2D-outputs. 
+                                Observing the CNNs behaviour and performance, the configurations created for the following experiments are based on architectures with convolution layers. 
+                            </p>
+                            <p class="section__text">
+                                Given the generous size of the new dataset, the data is split in three sets: train, validation, test. The training, testing and validation are performed on batches of data of size 64. This size is suitable for both generalization and prevention of noisy gradients.
+                            </p>
+                            <p class="section__text">
+                                Every training process is optimized using SGD and the cost at every training moment is based on MSE criterion.
+                                The regularization strategy consist in applying the L<sup>2</sup> penalty when updating the parameters and by introducing Dropout layers.
+                            </p>
+                        </div>
+
+                        <div id="s4" class="section__anchor-space"></div>
+                        <div class="section__holder">
+                            <div class="section__title">
+                                Unimodal Approach
+                            </div>
+                            <div class="section__separator multimodal-bg"></div>
+                            <p class="section__text">
+                                The first experiments are conducted based on one modality at a time, using the features previously extracted, with the finality in further creating fusions between modalities and conduct a comparative analysis on these methods.
+                            </p>
+                        </div>
+
+                        <div id="s5" class="section__anchor-space"></div>
+                        <div class="section__holder">
+                            <div class="section__title">
+                                Audio Modality
+                            </div>
+                            <div class="section__separator multimodal-bg"></div>
+                            <p class="section__text">
+                                The first model created is trained on the audio features with size 20&times;1502, representing the MFCCs extracted from 45sec audio excerpt sampled at the rate 22,050Hz. The first dimension is given by the number of Mel-coefficients used and the second dimension represents the number of windowed segments obtained from the initial signal. 
+                                The convolution operations in the model are based on one-dimensional kernels. Therefore, the 2D image-like format of the features is converted to 1D format with 20 channels.
+                            </p>
+                            <p class="section__text">
+                                For this approach, I considered a convolutional block with a 1D-Convolution layer with kernels of size 10 and stride 1, followed by Batch normalization, ReLU activation and subsampling by applying an Max Pooling layer with kernels of size 4 and stride 4.
+                                The architecture of the odel consist in two convolutional blocks, followed by an Average Pooling layer with kernel of size 4 and stride 4, thus reducing the size of the feature maps, as method of preventing the overfitting to occur. The flattened output of this layer is forwarded to a linear layer with 64 hidden units. This is followed by ReLU activation and finally, performing one more linear operation, the data is mapped to the 2D-output.
+                                Dropout layers are introduced before each linear layer, with a probability of 50%.
                             </p>
                             <div class="section__image-holder">
-                                <img src="images\deam_distribution2.png" width=100%>
+                                <img src="images\audio_net.png" width=100%>
                             </div>
                             <div class="section__fig-caption">
                                 <p class="section__fig-caption__text">
-                                   Distribution of DEAM data in the four quadrants.
+                                   Architecture of the model trained on audio features.
                                 </p>
                             </div>
-                        </div> -->
+                            <p class="section__text">
+                                Analysing the model's performance metrics, the difference in the value of the coefficient of determination is clearly visible, suggesting a much stronger relation between the audio modality and the arousal dimension. This is not necessarily surprising, as the intensity of an emotion is much easier evoked by the pitch of the audio, when compared to the energy of the emotion.
+                            </p>
+                            <div class="section__image-holder">
+                                <img src="images\audio_metrics.png" width=35%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text">
+                                    Performance metrics for the model trained on audio features.
+                                </p>
+                            </div>
+                            <p class="section__text">
+                                These unsatisfactory results may have the cause in the annotations process, where scores for valence and arousal were extracted from social tags and were associated to the entire songs, not only the audio excerpts used as input data. This observation raises the question of reliability of the annotations.
+                            </p>
+                            <p class="section__text">
+                                For a better understanding of the model's behaviour, the numeric scores are paired with visualizations of the predicted values compared to the observed values. The differences in the R<sup>2</sup> scores for the two dimensions is also reflected in these visualizations, where the predictions for valence only slightly fit the observed values, while in the case of arousal, the predictions appear much closer to the expected values.
+                            </p>
+                            <div class="section__image-holder">
+                                <img src="images\audio_valence_arousal.png" width=95%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text">
+                                    Model trained on audio features - Results for the valence dimension <b><em>(left)</em></b> and the arousal dimension <b><em>(right)</em></b>.
+                                </p>
+                            </div>
+                            <p class="section__text">
+                                The values predicted cover a narrower range than the observed values, with bigger differences in the arousal dimension. This aspect reflects in the gathered display of the predicted values in the four quadrants.
+                            </p>
+                            <div class="section__image-holder">
+                                <img src="images\audio_ranges.png" width=55%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text">
+                                    Ranges of observed and predicted values for the model trained on audio features.
+                                </p>
+                            </div>
+                            <p class="section__text">
+                                Another observation regarding the distribution in the emotion space is the rather balanced accuracy of the predictions judging by the classification in the four quadrants, indicating the augmentation process was properly performed.
+                            </p>
+                            <div class="section__image-holder">
+                                <img src="images\audio_quadrants.png" width=50%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text">
+                                    Model trained on audio features - Results for valence and arousal in the space of emotions described by the four quadrants.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div id="s6" class="section__anchor-space"></div>
+                        <div class="section__holder">
+                            <div class="section__title">
+                                Text Modalities
+                            </div>
+                            <div class="section__separator multimodal-bg"></div>
+                            <p class="section__text">
+                                The next experiments consist in training two models on the lyrics features and on the comments features, respectively, both with size 500&times;300, representing the vector embeddings of the lyrical or comments text. The first dimension denotes the length of the sequence and the second dimension is given by the number of features in the word2vec embedding used to describe each word.
+                            </p>
+                            <p class="section__text">
+                                In order to apply convolution operations with 2D kernels on these sets of features, an additional dimension must be artificially created, representing the number of channels (one channel in this case).
+                            </p>
+                            <p class="section__text">
+                                Each of these modalities is approached using a CNN architecture on the pre-trained embedded representations of lyrics and comments data, composed of one 2D convolution layer with kernels of size 10&times;300 and stride 1, that cover the entire feature dimension at a time, followed by a Batch normalization layer, with non-linearity induced by ReLU activation and subsampling by applying a Max Pooling layer with kernels of size 2 and stride 2. Added to this is an Average Pooling layer with kernel of size 4 and stride 4, that reduces the size of the feature maps and has a role in preventing the overfitting to occur. The flattened output of this layer is forwarded to a linear layer with 32 hidden units. By performing one more linear operation, the data is mapped to the 2D-output. Each of the last two linear layers are preceded by Dropout layers with a probability of 50%.
+                            </p>
+                            <div class="section__image-holder">
+                                <img src="images\text_net.png" width=100%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text">
+                                    Architecture used for the models trained on lyrics features and on comments features.
+                                </p>
+                            </div>
+                            <p class="section__text">
+                                The training process is performed separately in the case of each modality: one model is trained on the lyrics embedded representations and another model is trained on the comments embedding, both having the same architecture described above. The performance of these two models is discussed jointly, with their results displayed side-by-side.
+                            </p>
+                            <p class="section__text">
+                                For a legible differentiation between the two models, the following name conventions are defined: when referring to the model trained on lyrics features, <b><em>lyrics model</em></b> and <b><em>lyrics CNN</em></b> are used interchangeably, while <b><em>comments model</em></b> and <b><em>comments CNN</em></b> announce the model trained on comments features.
+                            </p>
+                            <p class="section__text">
+                                Evaluating their performance using the metrics displayed below, it is observable that both text features have a greater influence on the valence dimension than on the arousal dimension and the relation between the comments features and valence is stronger than the one between lyrics features and valence predictions. This observation is according to the human perception of emotions, as it is easier to extract one or multiple emotions from the explained meaning of the lyrics, than it is from the original lyrics. It also shows in the error values, the model trained on embedded representations of comments making better predictions in both valence and arousal dimensions.
+                            </p>
+                            <div class="section__image-holder">
+                                <img src="images\text_metrics.png" width=50%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text">
+                                    Performance metrics for the models trained on lyrics features and on comments features.
+                                </p>
+                            </div>
+                            <p class="section__text">
+                                These unsatisfactory results may have the cause in the annotations process, where scores for valence and arousal were extracted from social tags and were associated to the entire songs, not only the audio excerpts used as input data. This observation raises the question of reliability of the annotations.
+                            </p>
+                            <p class="section__text">
+                                These measurements are paired with visualizations of the predicted values compared to the observed values for the lyrics modality and the comments modality, where the smaller errors in the predictions made by the comments model are highlighted again, especially in the case of the valence dimension.
+                            </p>
+                            <div class="section__image-holder">
+                                <img src="images\lyrics_valence_arousal.png" width=95%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text">
+                                    Model trained on lyrics features - Results for the valence dimension <b><em>(left)</em></b> and the arousal dimension <b><em>(right)</em></b>.
+                                </p>
+                            </div>
+                            <div class="section__image-holder">
+                                <img src="images\comms_valence_arousal.png" width=95%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text">
+                                    Model trained on comments features - Results for the valence dimension <b><em>(left)</em></b> and the arousal dimension <b><em>(right)</em></b>.
+                                </p>
+                            </div>
+                            <p class="section__text">
+                                Adding the ranges defined by the observed values and the ones defined by the predicted values, it can be noted that in general, the former exceed the latter, especially in the case of the valence predictions made by the comments model. This results, to some extent, in better defined distribution in the four quadrants.
+                            </p>
+                            <div class="section__image-holder">
+                                <img src="images\text_ranges.png" width=55%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text">
+                                    Ranges of observed and predicted values for the model trained on the lyrics features and on the comments features.
+                                </p>
+                            </div>
+                            <div class="section__image-holder">
+                                <img src="images\text_quadrants.png" width=100%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text">
+                                    Model trained on audio features - Results for valence and arousal in the space of emotions described by the four quadrants.
+                                </p>
+                            </div>
+                            <p class="section__text">
+                                The good accuracy of predictions in the second quadrant can be attributed to the process of augmentation, where 20% of the words in duplicate lyrics and comments have been replaced with synonyms. This observation can be addressed by choosing a larger proportion of words to be replaced or by employing another text augmentation technique, such as reordering sentences.
+                            </p>
+                        </div>
 
 
 

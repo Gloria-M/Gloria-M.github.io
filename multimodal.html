@@ -135,7 +135,7 @@
                             <li class="toc__multimodal">
                                 <a href="#s11">
                                     <div class="toc__btn toc__btn__multimodal">
-                                        Conclusion
+                                        Conclusion and Perspectives
                                     </div>
                                 </a>
                             </li>
@@ -266,7 +266,7 @@
                                     <li class="toc-mobile__multimodal">
                                         <a href="#s11">
                                             <div class="toc-mobile__btn toc-mobile__btn__multimodal">
-                                                Conclusion
+                                                Conclusion and Perspectives
                                             </div>
                                         </a>
                                     </li>
@@ -379,7 +379,7 @@
 
                         <div id="s4" class="section__anchor-space"></div>
                         <div class="section__holder">
-                            <div class="section__title">
+                            <div class="section__stitle">
                                 Unimodal Approach
                             </div>
                             <div class="section__separator multimodal-bg"></div>
@@ -390,7 +390,7 @@
 
                         <div id="s5" class="section__anchor-space"></div>
                         <div class="section__holder">
-                            <div class="section__title">
+                            <div class="section__sstitle">
                                 Audio Modality
                             </div>
                             <div class="section__separator multimodal-bg"></div>
@@ -462,7 +462,7 @@
 
                         <div id="s6" class="section__anchor-space"></div>
                         <div class="section__holder">
-                            <div class="section__title">
+                            <div class="section__sstitle">
                                 Text Modalities
                             </div>
                             <div class="section__separator multimodal-bg"></div>
@@ -501,9 +501,6 @@
                                 </p>
                             </div>
                             <p class="section__text">
-                                These unsatisfactory results may have the cause in the annotations process, where scores for valence and arousal were extracted from social tags and were associated to the entire songs, not only the audio excerpts used as input data. This observation raises the question of reliability of the annotations.
-                            </p>
-                            <p class="section__text">
                                 These measurements are paired with visualizations of the predicted values compared to the observed values for the lyrics modality and the comments modality, where the smaller errors in the predictions made by the comments model are highlighted again, especially in the case of the valence dimension.
                             </p>
                             <div class="section__image-holder">
@@ -526,7 +523,7 @@
                                 Adding the ranges defined by the observed values and the ones defined by the predicted values, it can be noted that in general, the former exceed the latter, especially in the case of the valence predictions made by the comments model. This results, to some extent, in better defined distribution in the four quadrants.
                             </p>
                             <div class="section__image-holder">
-                                <img src="images\text_ranges.png" width=55%>
+                                <img src="images\text_ranges.png" width=65%>
                             </div>
                             <div class="section__fig-caption">
                                 <p class="section__fig-caption__text">
@@ -538,11 +535,239 @@
                             </div>
                             <div class="section__fig-caption">
                                 <p class="section__fig-caption__text">
-                                    Model trained on audio features - Results for valence and arousal in the space of emotions described by the four quadrants.
+                                    Model trained on lyrics features <b><em>(left)</em></b> and on comments features <b><em>(right)</em></b>  - Results for valence and arousal in the space of emotions described by the four quadrants.
                                 </p>
                             </div>
                             <p class="section__text">
                                 The good accuracy of predictions in the second quadrant can be attributed to the process of augmentation, where 20% of the words in duplicate lyrics and comments have been replaced with synonyms. This observation can be addressed by choosing a larger proportion of words to be replaced or by employing another text augmentation technique, such as reordering sentences.
+                            </p>
+                        </div>
+
+                        <div id="s7" class="section__anchor-space"></div>
+                        <div class="section__holder">
+                            <div class="section__sstitle">
+                                Results
+                            </div>
+                            <div class="section__separator multimodal-bg"></div>
+                            <p class="section__text">
+                                For a better appreciation of the role each of the three modalities described above has in experiencing music from the listener position, the configurations used for learning from the three types of data are presented collectively and analysed comparatively.
+                            </p>
+                            <p class="section__text">
+                                When referring to the model trained on the audio features, <b><em>audio model</em></b> and <b><em>audio CNN</em></b> are used interchangeably and in the case of the other two modalities, the same conventions previously defined will be used, specifically <b><em>lyrics model</em></b> or <b><em>lyrics CNN</em></b> for the model trained on lyrics features and <b><em>comments model</em></b> or <b><em>comments CNN</em></b> for the model trained on comments features.
+                            </p>
+                            <p class="section__text">
+                                The first analysis perspective is regarding the accuracy of predictions in the four quadrants defining the 2D space of emotions. It can be noted that learning from the MFCCs features, in the case of the audio model, led to rather balanced accuracy of predictions across quadrants, as compared to learning on text features. The discrepancies in the accuracy of predictions in quadrant 2, where the data was oversampled the most and the rest of the quadrants become more visible in the cases of the lyrics and comments models. This indicates, as stated before, that the augmentation strategy need to be improved.
+                            </p>
+                            <div class="section__image-holder">
+                                <img src="images\unimodal_acc.png" width=70%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text">
+                                    Comparison of the accuracy of the quadrant predictions between the three configurations based on the audio, lyrics and comments features.
+                                </p>
+                            </div>
+                            <p class="section__text">
+                                Computing the errors of predictions <b><em>MAE</em></b> and <b><em>MSE</em></b> and the coefficient of correlation <b><em>R<sup>2</sup></em></b>, the most important observations is regarding the relation between the input features and the two dimensions of the emotion space. 
+                            </p>
+                            <div class="section__image-holder">
+                                <img src="images\unimodal_metrics.png" width=55%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text">
+                                    Comparison of the performance metrics between the three configurations based on the audio, lyrics and comments features.
+                                </p>
+                            </div>
+                            <p class="section__text">
+                                While the audio features have a greater influence on the arousal predictions, the text features -lyrics and comments- have a stronger effect on the valence predictions. This can be considered a translation of the way humans extract emotions differently from different types of information: it is easier to describe the intensity of an emotion from the melody/beat and the positive or negative energy of an emotion is detected better from lyrics or, even more directly, from the comments explaining the meaning of the lyrics.
+                            </p>
+                            <p class="section__text">
+                                This constitutes motivation for the multimodal strategies described further on.
+                            </p>
+                        </div>
+
+                        <div id="s8" class="section__anchor-space"></div>
+                        <div class="section__holder">
+                            <div class="section__stitle">
+                                Multimodal Approach
+                            </div>
+                            <div class="section__separator multimodal-bg"></div>
+                            <p class="section__text">
+                                The scope of the following experiments is to get closer to the complexity of a musical experience, by incorporating different type of features into the training of one model. This is achieved by combining two-by-two the previously trained models and keeping parts of the knowledge gathered during the unimodal training process.
+                            </p>
+                            <p class="section__text">
+                                Considering this multimodal approach, two experiments are described, as follows: the first experiment consists in the fusion of the models trained on audio features and on lyrics features, respectively and the second experiment consists in a configuration incorporating the model trained on audio features and the model trained on comments features.
+                            </p>
+                            <p class="section__text">
+                                These are performed by keeping the convolution layers along with the already learned parameters and concatenating the outputs to be further fed to a sequence of two linear layers mapping to the output. Therefore, the architecture of the resulted model consist in a pre-trained segment composed of the convolution blocks of the model trained on audio features and the convolution block of the models trained on lyrics features and on comments features, respectively. The feature maps resulted from these configurations are concatenated and fed to the untrained part of the fusion model represented by a linear layer with 256 hidden units, followed by the output layer. Each of the linear layers is preceded by a Dropout layer with a probability of 50%.
+                            </p>
+                            <div class="section__image-holder">
+                                <img src="images\FusionNet.png" width=100%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text">
+                                    Architecture of the 2D-output fusion model trained on audio and lyrics/comments features
+                                </p>
+                            </div>
+                            <p class="section__text">
+                                It can be noted that the flattened feature maps resulted from the two branches of the neural network have different sizes, the training of this fusion model being performed on data where ~75% comes from lyrics or comments features and ~25% comes from audio features. This might constitute a direction to be explored in the future, along with the amount of pre-trained parameters used.
+                            </p>
+                        </div>
+
+                        <div id="s9" class="section__anchor-space"></div>
+                        <div class="section__holder">
+                            <div class="section__sstitle">
+                                Results
+                            </div>
+                            <div class="section__separator multimodal-bg"></div>
+                            <p class="section__text">
+                                For the results to be analysed easily, some name conventions are defined and used: <b><em>audio-lyrics model</em></b> and <b><em>audio-lyrics CNN</em></b> for the fusion of the audio and lyrics fusion model and <b><em>audio-comments model</em></b> and <b><em>audio-comments CNN</em></b> for the audio and comments fusion model.
+                            </p>
+                            <p class="section__text">
+                                By computing the firs set of regression metrics, the predictions made by both models in the arousal dimension are more accurate then the predictions in the valence dimension, with only slight improvements visible in the case of audio-comments approach.
+                            </p>
+                            <div class="section__image-holder">
+                                <img src="images\fusion_metrics.png" width=60%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text">
+                                    Performance metrics for the fusion model trained on audio and lyrics features and for the fusion model trained on audio and comments features.
+                                </p>
+                            </div>
+                            <p class="section__text">
+                                The visualizations of the predicted values compared to the observed values for the audio-lyrics fusion and for the audio-comments fusion display, in both cases, better fitted observed values in the arousal dimension when compared to the predictions in the valence dimension.
+                            </p>
+                            <div class="section__image-holder">
+                                <img src="images\al_valence_arousal.png" width=95%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text">
+                                    Fusion model trained on audio and lyrics features - Result for the valence dimension <b><em>(left)</em></b> and for the arousal dimension <b><em>(right)</em></b>.
+                                </p>
+                            </div>
+                            <div class="section__image-holder">
+                                <img src="images\ac_valence_arousal.png" width=95%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text">
+                                    Fusion model trained on audio and comments features - Result for the valence dimension <b><em>(left)</em></b> and for the arousal dimension <b><em>(right)</em></b>.
+                                </p>
+                            </div>
+                            <p class="section__text">
+                                At the same time, the range defined by the predicted arousal values is much narrower than the range defined by the expected arousal values, both upper and lower partitions of the observed range being poorly predicted, while in the case of the range defined by the valence predictions, the upper limit matches almost perfectly the observed range. The poorly approximated range of values reflects in the spread of the predictions in the emotions space, that cover a limited area.
+                            </p>
+                            <div class="section__image-holder">
+                                <img src="images\fusion_ranges.png" width=75%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text">
+                                    Ranges of observed and predicted values for the fusion models trained on the audio and lyrics features and on the audio and comments features.
+                                </p>
+                            </div>
+                            <div class="section__image-holder">
+                                <img src="images\al_ac_quadrants.png" width=100%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text">
+                                    Fusion models trained on audio and lyrics features <b><em>(left)</em></b> and on audio and comments features <b><em>(right)</em></b> - Result for valence and arousal in the space of emotions described by the four quadrants.
+                                </p>
+                            </div>
+                            <p class="section__text">
+                                Despite this aspect, it can be noted that, regarding the boundaries of the four quadrants, the predictions made by the audio-comments model are slightly distancing from the center and moving towards the corners of the emotion plane, the data belonging to the same quadrant being more gathered.
+                            </p>
+                        </div>
+
+                        <div id="s10" class="section__anchor-space"></div>
+                        <div class="section__holder">
+                            <div class="section__title">
+                                Comparative Analysis
+                            </div>
+                            <div class="section__separator multimodal-bg"></div>
+                            <p class="section__text">
+                                To summarize the effect including multiple musical dimensions has on the learning process of recognizing emotions, a comparative analysis of three models previously discussed is presented.
+                            </p>
+                            <p class="section__text">
+                                In order to facilitate the comparison the following name conventions are defined: the model trained on solely audio features is referred to as <b><em>audio model</em></b> or <b><em>audio CNN</em></b>, the fusion model trained on both audio and lyrics features is announced by <b><em>audio-lyrics model</em></b> or <b><em>audio-lyrics CNN</em></b> and <b><em>audio-comments model</em></b> and <b><em>audio-comments CNN</em></b> are used for the fusion model trained on both audio and comments features.
+                            </p>
+                            <p class="section__text">
+                                The first aspect analysed is with regard to the accuracy of predictions in the four quadrants defining the emotion space. In the case of the audio model, the most oversampled quadrant through augmentation (quadrant 2) held the best accuracy in predictions. In the case of the fusion models, it can be observed the higher accuracy of predictions in quadrants 1 and 2, that represent emotions with high intensity, as compared to quadrants 3 and 4, representing emotions with low intensity. Therefore, it can be concluded that the arousal predictions made by the fusion models are slightly exaggerated towards larger values.
+                            </p>
+                            <div class="section__image-holder">
+                                <img src="images\multimodal_comparative_acc.png" width=75%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text">
+                                    Comparison of the accuracy of the quadrant predictions between the model trained on solely audio features and the two fusion models trained on audio and lyrics features and on audio and comments features, respectively.
+                                </p>
+                            </div>
+                            <p class="section__text">
+                                Computing the regression metrics for each model, the most important observation is regarding the changes in the relations between the input features and the two dimensions of emotion. 
+                            </p>
+                            <div class="section__image-holder">
+                                <img src="images\multimodal_comparative_metrics.png" width=60%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text">
+                                    Comparison of the performance metrics between the model trained on solely audio features and the two fusion models trained on audio and lyrics features and on audio and comments features, respectively.
+                                </p>
+                            </div>
+                            <p class="section__text">
+                                While the <b><em></em>R<sup>2</sup></em></b> scores for the audio model highlight the difference between the strong influence the audio features have on the arousal dimension and the weak influence on the valence dimension, when introducing text features that have greater effect on the valence than on the arousal dimension through the fusion models, this difference is getting smaller and the <b><em></em>R<sup>2</sup></em></b> score computed for the valence predictions is getting closer to the <b><em></em>R<sup>2</sup></em></b> score for the arousal predictions.
+                            </p>
+                            <p class="section__text">
+                                Analysing the <b><em></em>MAE</em></b> and <b><em></em>MSE</em></b> errors values, it can be noted that the fusion models improved only slightly the errors of predictions made by the audio model, the distance between the errors on the arousal dimension and the errors on the valence dimension remaining significant.
+                            </p>
+                            <p class="section__text">
+                                It would appear that the characteristics of training a neural network on solely audio features stand out when approaching a fusion of this model and a model trained on lyrics or comments features, despite the fact that the data used to train the fusion model consists in patterns of text features in a greater proportion than the patterns of audio features. It is worth investigating in the future the role different abstraction levels of the input features have on the learning process, as the patterns from the text features used to train the fusion model resulted after a single convolution operation, while the patterns from audio features used in training the fusion configuration resulted after two convolution operations.
+                            </p>
+                        </div>
+
+                        <div id="s11" class="section__anchor-space"></div>
+                        <div class="section__holder">
+                            <div class="section__title">
+                                Conclusion and Perspectives
+                            </div>
+                            <div class="section__separator multimodal-bg"></div>
+                            <p class="section__text">
+                                The presented work investigated possible approaches to Music Emotion Recognition, by employing various set of tools.
+                            </p>
+                            <p class="section__text">
+                                Starting with a collection of introductory experiments (<a  class="section__cite multimodal-text" href="unimodal.html" target="_blank" rel="noopener noreferrer">unimodal MER</a>), the observations and the insights gained served as foundation for a more comprehensive and diverse analysis of the task. 
+                                This involved the construction of a <a  class="section__cite multimodal-text" href="new_dataset.html" target="_blank"
+                                rel="noopener noreferrer">new dataset</a> to meet the desired characteristics. Therefore, by making use of the social tags in the annotation process, a collection of $9\,972$ songs with their corresponding lyrics and comments was created. 
+                            </p>
+                            <p class="section__text">
+                                More complex experiments were conducted on this dataset, tackling the use of other modalities besides the audio features, specifically lyrical text data and comments text data. These were first analysed separated, followed by fusions between them.
+                            </p>
+                            <p class="section__text">
+                                Maybe the most important observation in this context is represented by the quality of annotations. At the end of this work, the reliability of annotations extracted from social tags is questioned. As shown in the figures below, the most frequent emotion tag <b><em>calmness</em></b> appears to have a neutralizing effect and results in a very regular display of data in the emotion space, with combinations of <b><em>calmness & sadness</em></b> emotion words in tracks' tags defining the bottom edge and combinations of <b><em>calmness & happiness</em></b> defining the right edge. 
+                            </p>
+                            <div class="section__image-holder">
+                                <img src="images\calm_distribution.png" width=95%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text">
+                                    Distribution of data from the new dataset in the emotion space - Occurrence of <b><em>calmness</em></b> emotion word in tracks' tags.
+                                </p>
+                            </div>
+                            <div class="section__image-holder">
+                                <img src="images\calm_combinations.png" width=100%>
+                            </div>
+                            <div class="section__fig-caption">
+                                <p class="section__fig-caption__text">
+                                    Distribution of data from the new dataset in the emotion space - Tracks with <b><em>calmness & sadness</em></b> tags <b><em>(left)</em></b> and tracks with <b><em>calmness & happiness</em></b> tags <b><em>(right)</em></b>
+                                </p>
+                            </div>
+                            <p class="section__text">
+                                This problem might be addressed by implementing a penalization system considering the occurrences of emotion tags in the dataset. One other possibility is using the comments modality to extract valence and arousal values.
+                            </p>
+                            <p class="section__text">
+                                Improvements could be made in regard to the features selected from the lyrics and comments modalities. It is worth investigating the behaviour of the regression when including Part of Speech processing or an analysis of structure in the case of lyrics data.
+                            </p>
+                            <p class="section__text">
+                                The computational resources still representing a clear limitation in terms of experimenting recognizing emotions from various audio features, improvements in the case of audio modality could be made by selecting multiple excerpts from the initial signal, this way capturing a greater variety of patterns.
+                            </p>
+                            <p class="section__text">
+                                To conclude, this study represents a well documented collection of experiments in terms of evaluation of the performance, that can serve for future analysis, which open the possibility to different approaches on the task of recognizing emotions in music.
                             </p>
                         </div>
 

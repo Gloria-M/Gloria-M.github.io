@@ -411,7 +411,9 @@
                                 <img src="images\deam_sets_distr.png" width=35%>
                             </div>
                             <div class="section__fig-caption">
-                                <p class="section__fig-caption__text"></p>
+                                <p class="section__fig-caption__text">
+                                    Original DEAM dataset - distribution in quadrants of the data in train and test sets.
+                                </p>
                             </div>
                         </div>
 
@@ -453,7 +455,9 @@
                                 <img src="images\original_2d_rscore.png" width=25%>
                             </div>
                             <div class="section__fig-caption">
-                                <p class="section__fig-caption__text"></p>
+                                <p class="section__fig-caption__text">
+                                    Original DEAM dataset - R<sup>2</sup> scores for 2D-output model.
+                                </p>
                             </div>
                         </div>
 
@@ -505,7 +509,9 @@
                                 <img src="images\original_metrics.png" width=50%>
                             </div>
                             <div class="section__fig-caption">
-                                <p class="section__fig-caption__text"></p>
+                                <p class="section__fig-caption__text">
+                                    Original DEAM dataset - performance metrics for the 2D-output model and the 1D-output models.
+                                </p>
                             </div>
                             <p class="section__text">
                                 The previously noted difference in the relations between the MFCCs features and the two emotion dimensions, given by the coefficient of correlation, remains valid in the case of the 1D-output configurations approach, with higher R<sup>2</sup> score for the arousal predictions and lower R<sup>2</sup> score for the valence predictions.
@@ -655,7 +661,9 @@
                                 <img src="images\augmented_metrics.png" width=50%>
                             </div>
                             <div class="section__fig-caption">
-                                <p class="section__fig-caption__text"></p>
+                                <p class="section__fig-caption__text">
+                                    Augmented DEAM dataset - performance metrics for 2D-output model and the 1D-output models.
+                                </p>
                             </div>
                             <p class="section__text">
                                 Analysing the visualizations of the observed and predicted values in the valence and arousal dimensions for the 2D-output model and the 1D-output models, the superiority of the latter is once again visible, considering the goodness of fit.
@@ -717,10 +725,12 @@
                                 The first analysis method consists in computing the accuracy of predictions made using each configuration in the four quadrants. This represents a numerical translation of the plots displaying the predictions in the emotion space. It can easily be observed that, while the models trained on the augmented dataset led to significant improvement in predictions in the underrepresented quadrants 2 and 4, the accuracy of the predictions in quadrants 1 and 3 is higher in case of the models trained on the original dataset. Nevertheless, the trade-off of a loss in the accuracy of the overrepresented quadrants is preferred, as it leads to overall balanced and qualitative results.
                             </p>
                             <div class="section__image-holder">
-                                <img src="images\comparative_acc.png" width=70%>
+                                <img src="images\comparative_acc.png" width=65%>
                             </div>
                             <div class="section__fig-caption">
-                                <p class="section__fig-caption__text"></p>
+                                <p class="section__fig-caption__text">
+                                    DEAM dataset - Comparison of the accuracy of the quadrant predictions between the configurations of two 1D-output models trained on the original dataset and the augmented dataset.
+                                </p>
                             </div>
                             <p class="section__text">
                                 Evaluating the models' performance by computing the regression metrics <b><em>MAE</em></b>, <b><em>MSE</em></b> and <b><em>R<sup>2</sup></em></b> reveals again the positive influence augmenting the dataset prior to training has on the learning process.

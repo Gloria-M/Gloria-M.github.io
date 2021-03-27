@@ -253,7 +253,9 @@
                                 As displayed in the image below, based on the author best results, the Generator architecture is represented a collection of <b>4</b> densely connected Residual Blocks, each of them consisting in <b>4</b> linked Residual Units, followed by Convolution and Batch normalization layers. Through <b>skip connections</b>, the low-resolution CT image is added to the output obtained from the first part of the generator and fed to another Convolution layer, followed by a flattening operation (for which I choose convolution with 1 kernel) and non-linearity induced by Parametric ReLU.
                             </p>
                             <div class="section__image-holder">
-                                <img src="images\Generator_complete.png" width=100%>
+                                <a class="section__cite srT-text" href="images\Generator_complete.png" target="_blank" rel="noopener noreferrer">
+                                    <img src="images\Generator_complete.png" width=100%>
+                                </a>
                             </div>
                             <div class="section__fig-caption">
                                 <p class="section__fig-caption__text">
@@ -291,7 +293,9 @@
                                 <a class="section__cite srT-text" href="https://arxiv.org/abs/1609.04802" target="_blank" rel="noopener noreferrer"> [Ledig et al., 2017]</a>, the Discriminator architecture is composed of <b>8</b> Convolutional blocks with the same structure, excepting the first one. The number of convolution kernels is increased by a factor of 2, with alternating strided and not-strided operations, following the VGG network scheme. This part outputs <b>512</b> feature maps (representations of the super-resolution CT image or the high-resolution CT image), which are fed to a sequence of <b>2</b> linear layers with Leaky ReLU activation. The output of the discriminator represents the probability the input CT image is the high-resolution CT image.
                             </p>
                             <div class="section__image-holder">
-                                <img src="images\DiscriminatorComplete.png" width=55%>
+                                <a class="section__cite srT-text" href="images\DiscriminatorComplete.png" target="_blank" rel="noopener noreferrer">
+                                    <img src="images\DiscriminatorComplete.png" width=55%>
+                                </a>
                             </div>
                             <div class="section__fig-caption">
                                 <p class="section__fig-caption__text">
@@ -311,7 +315,9 @@
                                 The complete architecture of the Generative Adversarial Network based on multiple dense residual blocks is displayed below:
                             </p>
                             <div class="section__image-holder">
-                                <img src="images\GAN.png" width=60%>
+                                <a class="section__cite srT-text" href="images\GAN.png" target="_blank" rel="noopener noreferrer">
+                                    <img src="images\GAN.png" width=60%>
+                                </a>
                             </div>
                             <div class="section__fig-caption">
                                 <p class="section__fig-caption__text">
@@ -325,7 +331,9 @@
                                 The generated image, along with the real high-resolution CT image are fed to the VGG-19 Feature Extractor, resulting in feature maps, used to compute the <b>F-loss</b> involved in the optimization of the generator parameters.
                             </p>
                             <div class="section__image-holder">
-                                <img src="images\ct_perceptual_loss.png" width=85%>
+                                <a class="section__cite srT-text" href="images\ct_perceptual_loss.png" target="_blank" rel="noopener noreferrer">
+                                    <img src="images\ct_perceptual_loss.png" width=85%>
+                                </a>
                             </div>
                             <div class="section__fig-caption">
                                 <p class="section__fig-caption__text">
@@ -337,7 +345,9 @@
                                 <a class="section__cite srT-text" href="https://arxiv.org/abs/1704.00028" target="_blank" rel="noopener noreferrer"> [Gulrajani et al., 2017]</a>. Receiving as input low-resolution or high-resolution CT images, it outputs the probability score of the input being discriminated as high-resolution image.
                             </p>
                             <div class="section__image-holder">
-                                <img src="images\ct_wasserstein_loss.png" width=85%>
+                                <a class="section__cite srT-text" href="images\ct_wasserstein_loss.png" target="_blank" rel="noopener noreferrer">
+                                    <img src="images\ct_wasserstein_loss.png" width=85%>
+                                </a>
                             </div>
                             <div class="section__fig-caption">
                                 <p class="section__fig-caption__text">
@@ -348,7 +358,9 @@
                                 Based on the formulations described above, the <b>overall objective function</b>, can be defined as follows:
                             </p>
                             <div class="section__image-holder">
-                                <img src="images\ct_overall_loss.png" width=85%>
+                                <a class="section__cite srT-text" href="images\ct_overall_loss.png" target="_blank" rel="noopener noreferrer">
+                                    <img src="images\ct_overall_loss.png" width=85%>
+                                </a>
                             </div>
                             <div class="section__fig-caption">
                                 <p class="section__fig-caption__text">
@@ -359,7 +371,9 @@
                                 The generator and discriminator loss functions are modified in the following manner:
                             </p>
                             <div class="section__image-holder">
-                                <img src="images\ct_discriminator_generator_loss.png" width=85%>
+                                <a class="section__cite srT-text" href="images\ct_discriminator_generator_loss.png" target="_blank" rel="noopener noreferrer">
+                                    <img src="images\ct_discriminator_generator_loss.png" width=85%>
+                                </a>
                             </div>
                             <div class="section__fig-caption">
                                 <p class="section__fig-caption__text">
@@ -379,7 +393,9 @@
                                 The training is carried out on <b>96&times;96</b> non-overlapping patches extracted from <b>512&times;512</b> CT images, in batches of 16. The pixels values are truncated and the images are scaled to interval <b>0 .. 1</b>. The low-resolution CT images are obtained by scaling down the high-resolution CT images by a factor of <b>4</b>, followed by upscaling to the original dimension using <b>bicubic interpolation</b>.
                             </p>
                             <div class="section__image-holder">
-                                <img src="images\low_high_res_ct.png" width=85%>
+                                <a class="section__cite srT-text" href="images\low_high_res_ct.png" target="_blank" rel="noopener noreferrer">
+                                    <img src="images\low_high_res_ct.png" width=85%>
+                                </a>
                             </div>
                             <div class="section__fig-caption">
                                 <p class="section__fig-caption__text">
@@ -404,7 +420,9 @@
                                 For the evaluation phase, the learned weights are applied to patches of size <b>128&times;128</b> obtained by dividing unseen CT slices, in order to be able to reconstruct the image, as illustrated below. The low-resolution CT images are obtained the same way as in the case of the train data.
                             </p>
                             <div class="section__image-holder">
-                                <img src="images\test_patches.png" width=45%>
+                                <a class="section__cite srT-text" href="images\test_patches.png" target="_blank" rel="noopener noreferrer">
+                                    <img src="images\test_patches.png" width=45%>
+                                </a>
                             </div>
                             <div class="section__fig-caption">
                                 <p class="section__fig-caption__text">
@@ -434,48 +452,62 @@
                                 I find the evolution of the generated images interesting to observe and gain insights on the convolution operations and patterns discovered during training.
                             </p>
                             <div class="section__image-holder">
-                                <img src="images\CT_training_evolution.png" width=100%>
+                                <a class="section__cite srT-text" href="images\CT_training_evolution.png" target="_blank" rel="noopener noreferrer">
+                                    <img src="images\CT_training_evolution.png" width=100%>
+                                </a>
                             </div>
                             <div class="section__fig-caption">
-                                <p class="section__fig-caption__text">
-                                   Generator output at different steps in the training process.
+                                <p class="section__fig-caption__text">                                   
+                                   <a class="section__cite srT-text" href="images\CT_training_evolution.png" target="_blank" rel="noopener noreferrer"> Generator output at different steps in the training process.</a>
                                 </p>
                             </div>
                             <p class="section__text">
                                 The experiment concludes with testing the trained GAN model on the unseen CT slices, with the results shown below:
                             </p>
                             <div class="section__image-holder">
-                                <img src="images\test_results_205_1500.png" width=100%>
+                                <a class="section__cite srT-text" href="images\test_results_205_1500.png" target="_blank" rel="noopener noreferrer">
+                                    <img src="images\test_results_205_1500.png" width=100%>
+                                </a>
                             </div>
                             <div class="section__fig-caption">
                                 <p class="section__fig-caption__text"></p>
                             </div>
                             <div class="section__image-holder">
-                                <img src="images\test_results_215_1500.png" width=100%>
+                                <a class="section__cite srT-text" href="images\test_results_215_1500.png" target="_blank" rel="noopener noreferrer">
+                                    <img src="images\test_results_215_1500.png" width=100%>
+                                </a>
                             </div>
                             <div class="section__fig-caption">
                                 <p class="section__fig-caption__text"></p>
                             </div>
                             <div class="section__image-holder">
-                                <img src="images\test_results_225_1500.png" width=100%>
+                                <a class="section__cite srT-text" href="images\test_results_225_1500.png" target="_blank" rel="noopener noreferrer">
+                                    <img src="images\test_results_225_1500.png" width=100%>
+                                </a>
                             </div>
                             <div class="section__fig-caption">
                                 <p class="section__fig-caption__text"></p>
                             </div>
                             <div class="section__image-holder">
-                                <img src="images\test_results_235_1500.png" width=100%>
+                                <a class="section__cite srT-text" href="images\test_results_235_1500.png" target="_blank" rel="noopener noreferrer">
+                                    <img src="images\test_results_235_1500.png" width=100%>
+                                </a>
                             </div>
                             <div class="section__fig-caption">
                                 <p class="section__fig-caption__text"></p>
                             </div>
                             <div class="section__image-holder">
-                                <img src="images\test_results_245_1500.png" width=100%>
+                                <a class="section__cite srT-text" href="images\test_results_245_1500.png" target="_blank" rel="noopener noreferrer">
+                                    <img src="images\test_results_245_1500.png" width=100%>
+                                </a>
                             </div>
                             <div class="section__fig-caption">
                                 <p class="section__fig-caption__text"></p>
                             </div>
                             <div class="section__image-holder">
-                                <img src="images\test_results_255_1500.png" width=100%>
+                                <a class="section__cite srT-text" href="images\test_results_255_1500.png" target="_blank" rel="noopener noreferrer">
+                                    <img src="images\test_results_255_1500.png" width=100%>
+                                </a>
                             </div>
                             <div class="section__fig-caption">
                                 <p class="section__fig-caption__text">

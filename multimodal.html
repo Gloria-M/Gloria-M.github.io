@@ -298,7 +298,9 @@
                                 The audio samples are reduced to an excerpt, by sampling the the beginning of the cropped segment from an uniform distribution, with the scope of gathering audio properties from different parts in song. The length of the excerpts is set to 73sec, aiming to capture as much of the initial signal as possible. This length is further reduced to 45sec, by keeping the first 3sec from consecutive non-overlapping 5sec segments. Although not ideal, this approach is motivated by the desire to obtain comprehensive information from a song, considering the limited computational resources.
                             </p>
                             <div class="section__image-holder">
-                                <img src="images\audio_augmentation.png" width=95%>
+                                <a  class="section__cite multimodal-text" href="images\audio_augmentation.png" target="_blank" rel="noopener noreferrer">
+                                    <img src="images\audio_augmentation.png" width=95%>
+                                </a>
                             </div>
                             <div class="section__fig-caption">
                                 <p class="section__fig-caption__text">
@@ -404,7 +406,9 @@
                                 Dropout layers are introduced before each linear layer, with a probability of 50%.
                             </p>
                             <div class="section__image-holder">
-                                <img src="images\audio_net.png" width=100%>
+                                <a  class="section__cite multimodal-text" href="images\audio_net.png" target="_blank" rel="noopener noreferrer">
+                                    <img src="images\audio_net.png" width=100%>
+                                </a>
                             </div>
                             <div class="section__fig-caption">
                                 <p class="section__fig-caption__text">
@@ -415,7 +419,9 @@
                                 Analysing the model's performance metrics, the difference in the value of the coefficient of determination is clearly visible, suggesting a much stronger relation between the audio modality and the arousal dimension. This is not necessarily surprising, as the intensity of an emotion is much easier evoked by the pitch of the audio, when compared to the energy of the emotion.
                             </p>
                             <div class="section__image-holder">
-                                <img src="images\audio_metrics.png" width=35%>
+                                <a class="section__cite multimodal-text" href="images\audio_metrics.png" target="_blank" rel="noopener noreferrer">
+                                    <img src="images\audio_metrics.png" width=35%>
+                                </a>
                             </div>
                             <div class="section__fig-caption">
                                 <p class="section__fig-caption__text">
@@ -429,7 +435,9 @@
                                 For a better understanding of the model's behaviour, the numeric scores are paired with visualizations of the predicted values compared to the observed values. The differences in the R<sup>2</sup> scores for the two dimensions is also reflected in these visualizations, where the predictions for valence only slightly fit the observed values, while in the case of arousal, the predictions appear much closer to the expected values.
                             </p>
                             <div class="section__image-holder">
-                                <img src="images\audio_valence_arousal.png" width=95%>
+                                <a class="section__cite multimodal-text" href="images\audio_valence_arousal.png" target="_blank" rel="noopener noreferrer">
+                                    <img src="images\audio_valence_arousal.png" width=95%>
+                                </a>
                             </div>
                             <div class="section__fig-caption">
                                 <p class="section__fig-caption__text">
@@ -440,7 +448,9 @@
                                 The values predicted cover a narrower range than the observed values, with bigger differences in the arousal dimension. This aspect reflects in the gathered display of the predicted values in the four quadrants.
                             </p>
                             <div class="section__image-holder">
-                                <img src="images\audio_ranges.png" width=55%>
+                                <a class="section__cite multimodal-text" href="images\audio_ranges.png" target="_blank" rel="noopener noreferrer">
+                                    <img src="images\audio_ranges.png" width=55%>
+                                </a>
                             </div>
                             <div class="section__fig-caption">
                                 <p class="section__fig-caption__text">
@@ -451,7 +461,9 @@
                                 Another observation regarding the distribution in the emotion space is the rather balanced accuracy of the predictions judging by the classification in the four quadrants, indicating the augmentation process was properly performed.
                             </p>
                             <div class="section__image-holder">
-                                <img src="images\audio_quadrants.png" width=50%>
+                                <a class="section__cite multimodal-text" href="images\audio_quadrants.png" target="_blank" rel="noopener noreferrer">
+                                    <img src="images\audio_quadrants.png" width=50%>
+                                </a>
                             </div>
                             <div class="section__fig-caption">
                                 <p class="section__fig-caption__text">
@@ -476,7 +488,9 @@
                                 Each of these modalities is approached using a CNN architecture on the pre-trained embedded representations of lyrics and comments data, composed of one 2D convolution layer with kernels of size 10&times;300 and stride 1, that cover the entire feature dimension at a time, followed by a Batch normalization layer, with non-linearity induced by ReLU activation and subsampling by applying a Max Pooling layer with kernels of size 2 and stride 2. Added to this is an Average Pooling layer with kernel of size 4 and stride 4, that reduces the size of the feature maps and has a role in preventing the overfitting to occur. The flattened output of this layer is forwarded to a linear layer with 32 hidden units. By performing one more linear operation, the data is mapped to the 2D-output. Each of the last two linear layers are preceded by Dropout layers with a probability of 50%.
                             </p>
                             <div class="section__image-holder">
-                                <img src="images\text_net.png" width=100%>
+                                <a class="section__cite multimodal-text" href="images\text_net.png" target="_blank" rel="noopener noreferrer">
+                                    <img src="images\text_net.png" width=100%>
+                                </a>
                             </div>
                             <div class="section__fig-caption">
                                 <p class="section__fig-caption__text">
@@ -493,7 +507,9 @@
                                 Evaluating their performance using the metrics displayed below, it is observable that both text features have a greater influence on the valence dimension than on the arousal dimension and the relation between the comments features and valence is stronger than the one between lyrics features and valence predictions. This observation is according to the human perception of emotions, as it is easier to extract one or multiple emotions from the explained meaning of the lyrics, than it is from the original lyrics. It also shows in the error values, the model trained on embedded representations of comments making better predictions in both valence and arousal dimensions.
                             </p>
                             <div class="section__image-holder">
-                                <img src="images\text_metrics.png" width=50%>
+                                <a class="section__cite multimodal-text" href="images\text_metrics.png" target="_blank" rel="noopener noreferrer">
+                                    <img src="images\text_metrics.png" width=50%>
+                                </a>
                             </div>
                             <div class="section__fig-caption">
                                 <p class="section__fig-caption__text">
@@ -504,7 +520,9 @@
                                 These measurements are paired with visualizations of the predicted values compared to the observed values for the lyrics modality and the comments modality, where the smaller errors in the predictions made by the comments model are highlighted again, especially in the case of the valence dimension.
                             </p>
                             <div class="section__image-holder">
-                                <img src="images\lyrics_valence_arousal.png" width=95%>
+                                <a class="section__cite multimodal-text" href="images\lyrics_valence_arousal.png" target="_blank" rel="noopener noreferrer">
+                                    <img src="images\lyrics_valence_arousal.png" width=95%>
+                                </a>
                             </div>
                             <div class="section__fig-caption">
                                 <p class="section__fig-caption__text">
@@ -512,7 +530,9 @@
                                 </p>
                             </div>
                             <div class="section__image-holder">
-                                <img src="images\comms_valence_arousal.png" width=95%>
+                                <a class="section__cite multimodal-text" href="images\comms_valence_arousal.png" target="_blank" rel="noopener noreferrer">
+                                    <img src="images\comms_valence_arousal.png" width=95%>
+                                </a>
                             </div>
                             <div class="section__fig-caption">
                                 <p class="section__fig-caption__text">
@@ -523,7 +543,9 @@
                                 Adding the ranges defined by the observed values and the ones defined by the predicted values, it can be noted that in general, the former exceed the latter, especially in the case of the valence predictions made by the comments model. This results, to some extent, in better defined distribution in the four quadrants.
                             </p>
                             <div class="section__image-holder">
-                                <img src="images\text_ranges.png" width=65%>
+                                <a class="section__cite multimodal-text" href="images\text_ranges.png" target="_blank" rel="noopener noreferrer">
+                                    <img src="images\text_ranges.png" width=65%>
+                                </a>
                             </div>
                             <div class="section__fig-caption">
                                 <p class="section__fig-caption__text">
@@ -531,7 +553,9 @@
                                 </p>
                             </div>
                             <div class="section__image-holder">
-                                <img src="images\text_quadrants.png" width=100%>
+                                <a class="section__cite multimodal-text" href="images\text_quadrants.png" target="_blank" rel="noopener noreferrer">
+                                    <img src="images\text_quadrants.png" width=100%>
+                                </a>
                             </div>
                             <div class="section__fig-caption">
                                 <p class="section__fig-caption__text">
@@ -559,7 +583,9 @@
                                 The first analysis perspective is regarding the accuracy of predictions in the four quadrants defining the 2D space of emotions. It can be noted that learning from the MFCCs features, in the case of the audio model, led to rather balanced accuracy of predictions across quadrants, as compared to learning on text features. The discrepancies in the accuracy of predictions in quadrant 2, where the data was oversampled the most and the rest of the quadrants become more visible in the cases of the lyrics and comments models. This indicates, as stated before, that the augmentation strategy need to be improved.
                             </p>
                             <div class="section__image-holder">
-                                <img src="images\unimodal_acc.png" width=70%>
+                                <a class="section__cite multimodal-text" href="images\unimodal_acc.png" target="_blank" rel="noopener noreferrer">
+                                    <img src="images\unimodal_acc.png" width=70%>
+                                </a>
                             </div>
                             <div class="section__fig-caption">
                                 <p class="section__fig-caption__text">
@@ -570,7 +596,9 @@
                                 Computing the errors of predictions <b><em>MAE</em></b> and <b><em>MSE</em></b> and the coefficient of correlation <b><em>R<sup>2</sup></em></b>, the most important observations is regarding the relation between the input features and the two dimensions of the emotion space. 
                             </p>
                             <div class="section__image-holder">
-                                <img src="images\unimodal_metrics.png" width=55%>
+                                <a class="section__cite multimodal-text" href="images\unimodal_metrics.png" target="_blank" rel="noopener noreferrer">
+                                    <img src="images\unimodal_metrics.png" width=55%>
+                                </a>
                             </div>
                             <div class="section__fig-caption">
                                 <p class="section__fig-caption__text">
@@ -601,7 +629,9 @@
                                 These are performed by keeping the convolution layers along with the already learned parameters and concatenating the outputs to be further fed to a sequence of two linear layers mapping to the output. Therefore, the architecture of the resulted model consist in a pre-trained segment composed of the convolution blocks of the model trained on audio features and the convolution block of the models trained on lyrics features and on comments features, respectively. The feature maps resulted from these configurations are concatenated and fed to the untrained part of the fusion model represented by a linear layer with 256 hidden units, followed by the output layer. Each of the linear layers is preceded by a Dropout layer with a probability of 50%.
                             </p>
                             <div class="section__image-holder">
-                                <img src="images\FusionNet.png" width=100%>
+                                <a class="section__cite multimodal-text" href="images\FusionNet.png" target="_blank" rel="noopener noreferrer">
+                                    <img src="images\FusionNet.png" width=100%>
+                                </a>
                             </div>
                             <div class="section__fig-caption">
                                 <p class="section__fig-caption__text">
@@ -626,7 +656,9 @@
                                 By computing the firs set of regression metrics, the predictions made by both models in the arousal dimension are more accurate then the predictions in the valence dimension, with only slight improvements visible in the case of audio-comments approach.
                             </p>
                             <div class="section__image-holder">
-                                <img src="images\fusion_metrics.png" width=60%>
+                                <a class="section__cite multimodal-text" href="images\fusion_metrics.png" target="_blank" rel="noopener noreferrer">
+                                    <img src="images\fusion_metrics.png" width=60%>
+                                </a>
                             </div>
                             <div class="section__fig-caption">
                                 <p class="section__fig-caption__text">
@@ -637,7 +669,9 @@
                                 The visualizations of the predicted values compared to the observed values for the audio-lyrics fusion and for the audio-comments fusion display, in both cases, better fitted observed values in the arousal dimension when compared to the predictions in the valence dimension.
                             </p>
                             <div class="section__image-holder">
-                                <img src="images\al_valence_arousal.png" width=95%>
+                                <a class="section__cite multimodal-text" href="images\al_valence_arousal.png" target="_blank" rel="noopener noreferrer">
+                                    <img src="images\al_valence_arousal.png" width=95%>
+                                </a>
                             </div>
                             <div class="section__fig-caption">
                                 <p class="section__fig-caption__text">
@@ -645,7 +679,9 @@
                                 </p>
                             </div>
                             <div class="section__image-holder">
-                                <img src="images\ac_valence_arousal.png" width=95%>
+                                <a class="section__cite multimodal-text" href="images\ac_valence_arousal.png" target="_blank" rel="noopener noreferrer">
+                                    <img src="images\ac_valence_arousal.png" width=95%>
+                                </a>
                             </div>
                             <div class="section__fig-caption">
                                 <p class="section__fig-caption__text">
@@ -656,7 +692,9 @@
                                 At the same time, the range defined by the predicted arousal values is much narrower than the range defined by the expected arousal values, both upper and lower partitions of the observed range being poorly predicted, while in the case of the range defined by the valence predictions, the upper limit matches almost perfectly the observed range. The poorly approximated range of values reflects in the spread of the predictions in the emotions space, that cover a limited area.
                             </p>
                             <div class="section__image-holder">
-                                <img src="images\fusion_ranges.png" width=75%>
+                                <a class="section__cite multimodal-text" href="images\fusion_ranges.png" target="_blank" rel="noopener noreferrer">
+                                    <img src="images\fusion_ranges.png" width=75%>
+                                </a>
                             </div>
                             <div class="section__fig-caption">
                                 <p class="section__fig-caption__text">
@@ -664,7 +702,9 @@
                                 </p>
                             </div>
                             <div class="section__image-holder">
-                                <img src="images\al_ac_quadrants.png" width=100%>
+                                <a class="section__cite multimodal-text" href="images\al_ac_quadrants.png" target="_blank" rel="noopener noreferrer">
+                                    <img src="images\al_ac_quadrants.png" width=100%>
+                                </a>
                             </div>
                             <div class="section__fig-caption">
                                 <p class="section__fig-caption__text">
@@ -692,7 +732,9 @@
                                 The first aspect analysed is with regard to the accuracy of predictions in the four quadrants defining the emotion space. In the case of the audio model, the most oversampled quadrant through augmentation (quadrant 2) held the best accuracy in predictions. In the case of the fusion models, it can be observed the higher accuracy of predictions in quadrants 1 and 2, that represent emotions with high intensity, as compared to quadrants 3 and 4, representing emotions with low intensity. Therefore, it can be concluded that the arousal predictions made by the fusion models are slightly exaggerated towards larger values.
                             </p>
                             <div class="section__image-holder">
-                                <img src="images\multimodal_comparative_acc.png" width=75%>
+                                <a class="section__cite multimodal-text" href="images\multimodal_comparative_acc.png" target="_blank" rel="noopener noreferrer">
+                                    <img src="images\multimodal_comparative_acc.png" width=75%>
+                                </a>
                             </div>
                             <div class="section__fig-caption">
                                 <p class="section__fig-caption__text">
@@ -703,7 +745,9 @@
                                 Computing the regression metrics for each model, the most important observation is regarding the changes in the relations between the input features and the two dimensions of emotion. 
                             </p>
                             <div class="section__image-holder">
-                                <img src="images\multimodal_comparative_metrics.png" width=60%>
+                                <a class="section__cite multimodal-text" href="images\multimodal_comparative_metrics.png" target="_blank" rel="noopener noreferrer">
+                                    <img src="images\multimodal_comparative_metrics.png" width=60%>
+                                </a>
                             </div>
                             <div class="section__fig-caption">
                                 <p class="section__fig-caption__text">
@@ -742,7 +786,9 @@
                                 Maybe the most important observation in this context is represented by the quality of annotations. At the end of this work, the reliability of annotations extracted from social tags is questioned. As shown in the figures below, the most frequent emotion tag <b><em>calmness</em></b> appears to have a neutralizing effect and results in a very regular display of data in the emotion space, with combinations of <b><em>calmness & sadness</em></b> emotion words in tracks' tags defining the bottom edge and combinations of <b><em>calmness & happiness</em></b> defining the right edge. 
                             </p>
                             <div class="section__image-holder">
-                                <img src="images\calm_distribution.png" width=95%>
+                                <a class="section__cite multimodal-text" href="images\calm_distribution.png" target="_blank" rel="noopener noreferrer">
+                                    <img src="images\calm_distribution.png" width=95%>
+                                </a>
                             </div>
                             <div class="section__fig-caption">
                                 <p class="section__fig-caption__text">
@@ -750,7 +796,9 @@
                                 </p>
                             </div>
                             <div class="section__image-holder">
-                                <img src="images\calm_combinations.png" width=100%>
+                                <a class="section__cite multimodal-text" href="images\calm_combinations.png" target="_blank" rel="noopener noreferrer">
+                                    <img src="images\calm_combinations.png" width=100%>
+                                </a>
                             </div>
                             <div class="section__fig-caption">
                                 <p class="section__fig-caption__text">

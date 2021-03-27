@@ -39,6 +39,14 @@
                 border-left: 2px solid $multimodalColorT40;
             }
         }
+
+        &__sr{
+
+            &:hover{
+                color: $srColor;
+                border-right: 2px solid $srColorT40;
+            }
+        }
     }
 
     &__btn-sub{
@@ -62,6 +70,14 @@
             &:hover{
                 color: $multimodalColor;
                 border-left: 6px solid $multimodalColorT40;
+            }
+        }
+
+        &__sr{
+
+            &:hover{
+                color: $srColor;
+                border-right: 6px solid $srColorT40;
             }
         }
     }
@@ -89,9 +105,17 @@
                 border-left: 10px solid $multimodalColorT40;
             }
         }
+
+        &__sr{
+
+            &:hover{
+                color: $srColor;
+                border-right: 10px solid $srColorT40;
+            }
+        }
     }
 
-    &__dataset, &__multimodal{
+    &__dataset, &__multimodal, &__sr{
         >a {
             font-size: .875rem;
             color: $dark;
